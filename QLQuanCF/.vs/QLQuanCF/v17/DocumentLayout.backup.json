@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\semester_1_2024_2025\\lttq\\qlquancf\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\qlquancf\\presentationlayer\\fmanages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmanages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\qlquancf\\dataaccesslayer\\nhanviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\dataaccesslayer\\nhanviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\semester_1_2024_2025\\lttq\\qlquancf\\qlquancf\\presentationlayer\\fmanages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmanages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\qlquancf\\businesslogiclayer\\nhanvienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\businesslogiclayer\\nhanvienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fMain.cs [Design]",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T08:05:24.172Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NhanVienBLL.cs",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\NhanVienBLL.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\BusinessLogicLayer\\NhanVienBLL.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\NhanVienBLL.cs",
+              "RelativeToolTip": "QLQuanCF\\BusinessLogicLayer\\NhanVienBLL.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAlwCIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T03:40:01.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fManages.cs",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fManages.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fManages.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fManages.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fManages.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAcwPoAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T03:04:48.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fManages.cs [Design]",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fManages.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fManages.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fManages.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fManages.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:48:38.063Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NhanVienDAL.cs",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\NhanVienDAL.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\DataAccessLayer\\NhanVienDAL.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\NhanVienDAL.cs",
+              "RelativeToolTip": "QLQuanCF\\DataAccessLayer\\NhanVienDAL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:59:47.221Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

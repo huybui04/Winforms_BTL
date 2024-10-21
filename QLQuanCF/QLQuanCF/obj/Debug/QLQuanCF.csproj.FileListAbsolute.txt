@@ -1,0 +1,26 @@
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe.config
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.pdb
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.AssemblyReference.cache
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fLogin.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.Properties.Resources.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.GenerateResource.cache
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.exe
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.pdb
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMain.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fManages.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMenuSelection.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe.config
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.pdb
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.AssemblyReference.cache
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fLogin.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMain.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fManages.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMenuSelection.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.Properties.Resources.resources
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.GenerateResource.cache
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.CoreCompileInputs.cache
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.exe
+D:\Semester_1_2024_2025\LTTQ\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.pdb
