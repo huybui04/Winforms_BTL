@@ -6,113 +6,15 @@ using System.Windows.Forms;
 
 namespace QLQuanCF
 {
-    //public partial class fManages : Form
-    //{
-    //    private NhanVienBLL _nhanVienBLL;
-
-    //    public fManages()
-    //    {
-    //        InitializeComponent();
-    //        _nhanVienBLL = new NhanVienBLL("Server=localhost,1444;Database=QLQuanCF;User Id=sa;Password=@Huy27112004;"); 
-    //        LoadNhanVienData();
-    //    }
-
-    //    private void LoadNhanVienData()
-    //    {
-    //        var nhanVienList = _nhanVienBLL.GetAllNhanVien();
-    //        dataNhanVien.DataSource = nhanVienList;
-    //    }
-
-    //    private void btnAdd_Click(object sender, EventArgs e)
-    //    {
-    //        var nhanVien = new NhanVien
-    //        {
-    //            MaCa = cbMaCa.Text,
-    //            TenNV = txtTenNV.Text,
-    //            ChucVu = cbChucVuNV.Text,
-    //            GioiTinh = cbGioiTinhNV.Text,
-    //            NgaySinh = dateNgaySinhNV.Value,
-    //            DiaChi = txtDiaChiNV.Text,
-    //            DienThoai = txtDienThoaiNV.Text
-    //        };
-
-    //        _nhanVienBLL.AddNhanVien(nhanVien);
-    //        LoadNhanVienData();
-    //        ClearInputFields();
-    //    }
-
-    //    private void btnUpdate_Click(object sender, EventArgs e)
-    //    {
-    //        var nhanVien = new NhanVien
-    //        {
-    //            MaNV = txtMaNV.Text,
-    //            MaCa = cbMaCa.Text,
-    //            TenNV = txtTenNV.Text,
-    //            ChucVu = cbChucVuNV.Text,
-    //            GioiTinh = cbGioiTinhNV.Text,
-    //            NgaySinh = dateNgaySinhNV.Value,
-    //            DiaChi = txtDiaChiNV.Text,
-    //            DienThoai = txtDiaChiNV.Text
-    //        };
-
-    //        _nhanVienBLL.UpdateNhanVien(nhanVien);
-    //        LoadNhanVienData();
-    //        ClearInputFields();
-    //    }
-
-    //    private void btnDelete_Click(object sender, EventArgs e)
-    //    {
-    //        string maNV = txtMaNV.Text;
-    //        _nhanVienBLL.DeleteNhanVien(maNV);
-    //        LoadNhanVienData();
-    //        ClearInputFields();
-    //    }
-
-    //    private void btnSearch_Click(object sender, EventArgs e)
-    //    {
-    //        string tenNV = txtSearchNV.Text;
-    //        var nhanVienList = _nhanVienBLL.GetNhanVienByName(tenNV);
-    //        dataNhanVien.DataSource = nhanVienList;
-    //    }
-
-    //    private void ClearInputFields()
-    //    {
-    //        txtMaNV.Clear();
-    //        cbMaCa.Text = "";
-    //        txtTenNV.Clear();
-    //        cbChucVuNV.Text = "";
-    //        cbGioiTinhNV.Text = "";
-    //        txtDiaChiNV.Clear();
-    //        txtDienThoaiNV.Clear();
-    //        txtSearchNV.Clear();
-    //    }
-
-    //    private void dataGridViewNhanVien_SelectionChanged(object sender, EventArgs e)
-    //    {
-    //        if (dataNhanVien.SelectedRows.Count > 0)
-    //        {
-    //            DataGridViewRow row = dataNhanVien.SelectedRows[0];
-    //            txtMaNV.Text = row.Cells["MaNV"].Value.ToString();
-    //            cbMaCa.Text = row.Cells["MaCa"].Value.ToString();
-    //            txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
-    //            cbChucVuNV.Text = row.Cells["ChucVu"].Value.ToString();
-    //            cbGioiTinhNV.Text = row.Cells["GioiTinh"].Value.ToString();
-    //            dateNgaySinhNV.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
-    //            txtDiaChiNV.Text = row.Cells["DiaChi"].Value.ToString();
-    //            txtDienThoaiNV.Text = row.Cells["DienThoai"].Value.ToString();
-    //        }
-    //    }
-    //}
-
-    public partial class fManages : Form
+    public partial class fNhanVien : Form
     {
         private NhanVienBLL _nhanVienBLL;
         private ErrorProvider errorProvider = new ErrorProvider();
 
-        public fManages()
+        public fNhanVien()
         {
             InitializeComponent();
-            _nhanVienBLL = new NhanVienBLL("Server=localhost,1444;Database=QLQuanCF;User Id=sa;Password=@Huy27112004;");
+            _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
             LoadNhanVienData();
         }
 

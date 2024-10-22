@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLQuanCF.PresentationLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,26 +24,43 @@ namespace QLQuanCF
 
         }
 
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QLNVStripMenuItem_Click(object sender, EventArgs e)
         {
-            fManages f = new fManages();
+            fNhanVien f = new fNhanVien();
             this.Hide();
             f.ShowDialog();
             this.Show();
         }
 
+        private void QLKHStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fKhachHang f = new fKhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void QLNLStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fNguyenLieu f = new fNguyenLieu();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Close();
-            }
+
         }
 
         private void btnChonMon_Click(object sender, EventArgs e)
         {
             fMenuSelection fMenuSelection = new fMenuSelection();
             fMenuSelection.Show();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

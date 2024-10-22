@@ -46,10 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\NguyenLieuDAL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
     <Compile Include="DataAccessLayer\DbProcess.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="PresentationLayer\DMSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\DMSanPham.Designer.cs">
+      <DependentUpon>DMSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,11 +78,11 @@
     <Compile Include="PresentationLayer\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\fManages.cs">
+    <Compile Include="PresentationLayer\fNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\fManages.Designer.cs">
-      <DependentUpon>fManages.cs</DependentUpon>
+    <Compile Include="PresentationLayer\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\fMenuSelection.cs">
       <SubType>Form</SubType>
@@ -74,19 +90,43 @@
     <Compile Include="PresentationLayer\fMenuSelection.Designer.cs">
       <DependentUpon>fMenuSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\fNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fNguyenLieu.Designer.cs">
+      <DependentUpon>fNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\NhaCungCap.Designer.cs">
+      <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\DMSanPham.resx">
+      <DependentUpon>DMSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\fManages.resx">
-      <DependentUpon>fManages.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fMenuSelection.resx">
       <DependentUpon>fMenuSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fNguyenLieu.resx">
+      <DependentUpon>fNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\NhaCungCap.resx">
+      <DependentUpon>NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
