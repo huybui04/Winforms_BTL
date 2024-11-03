@@ -46,25 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DMSanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhuVucBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
     <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\BanDAL.cs" />
+    <Compile Include="DataAccessLayer\DMSanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\KhachHangDAL.cs" />
+    <Compile Include="DataAccessLayer\KhuVucDAL.cs" />
     <Compile Include="DataAccessLayer\NguyenLieuDAL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
     <Compile Include="DataAccessLayer\DbProcess.cs" />
+    <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="Models\Ban.cs" />
+    <Compile Include="Models\DanhMucSanPham.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\KhuVuc.cs" />
     <Compile Include="Models\NguyenLieu.cs" />
+    <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
-    <Compile Include="PresentationLayer\DMSanPham.cs">
+    <Compile Include="PresentationLayer\Management\fBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\DMSanPham.Designer.cs">
-      <DependentUpon>DMSanPham.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Management\fBan.Designer.cs">
+      <DependentUpon>fBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\fKhachHang.cs">
+    <Compile Include="PresentationLayer\Management\fDMSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\fKhachHang.Designer.cs">
+    <Compile Include="PresentationLayer\Management\fDMSanPham.Designer.cs">
+      <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhachHang.Designer.cs">
       <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhuVuc.Designer.cs">
+      <DependentUpon>fKhuVuc.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\fLogin.cs">
       <SubType>Form</SubType>
@@ -78,10 +105,10 @@
     <Compile Include="PresentationLayer\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\fNhanVien.cs">
+    <Compile Include="PresentationLayer\Management\fNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\fNhanVien.Designer.cs">
+    <Compile Include="PresentationLayer\Management\fNhanVien.Designer.cs">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\fMenuSelection.cs">
@@ -90,25 +117,31 @@
     <Compile Include="PresentationLayer\fMenuSelection.Designer.cs">
       <DependentUpon>fMenuSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\fNguyenLieu.cs">
+    <Compile Include="PresentationLayer\Management\fNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\fNguyenLieu.Designer.cs">
+    <Compile Include="PresentationLayer\Management\fNguyenLieu.Designer.cs">
       <DependentUpon>fNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\NhaCungCap.cs">
+    <Compile Include="PresentationLayer\Management\fNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\NhaCungCap.Designer.cs">
-      <DependentUpon>NhaCungCap.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Management\fNhaCungCap.Designer.cs">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\DMSanPham.resx">
-      <DependentUpon>DMSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Management\fBan.resx">
+      <DependentUpon>fBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\fKhachHang.resx">
+    <EmbeddedResource Include="PresentationLayer\Management\fDMSanPham.resx">
+      <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fKhuVuc.resx">
+      <DependentUpon>fKhuVuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -116,17 +149,17 @@
     <EmbeddedResource Include="PresentationLayer\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\fNhanVien.resx">
+    <EmbeddedResource Include="PresentationLayer\Management\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fMenuSelection.resx">
       <DependentUpon>fMenuSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\fNguyenLieu.resx">
+    <EmbeddedResource Include="PresentationLayer\Management\fNguyenLieu.resx">
       <DependentUpon>fNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\NhaCungCap.resx">
-      <DependentUpon>NhaCungCap.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Management\fNhaCungCap.resx">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +185,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Public\search.png" />
+    <None Include="Public\save.png" />
+    <None Include="Public\cancel.png" />
+    <None Include="Public\add.png" />
+    <None Include="Public\delete.png" />
+    <None Include="Public\edit.png" />
+    <None Include="Public\exit.png" />
     <Content Include="Public\logo.jpg" />
   </ItemGroup>
   <ItemGroup />

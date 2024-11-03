@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLQuanCF.DataAccessLayer
 {
@@ -18,7 +15,6 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess = new DbProcess(connectionString);
         }
 
-        // Lấy tất cả nhân viên
         public List<NhanVien> GetAllNhanVien()
         {
             DataTable dataTable = _dbProcess.ExecuteQuery("GetAllNhanVien", null);
@@ -44,7 +40,6 @@ namespace QLQuanCF.DataAccessLayer
             return nhanViens;
         }
 
-        // Thêm nhân viên
         public void AddNhanVien(NhanVien nhanVien)
         {
             SqlParameter[] parameters =
@@ -61,7 +56,6 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess.ExecuteNonQuery("AddNhanVien", parameters);
         }
 
-        // Cập nhật nhân viên
         public void UpdateNhanVien(NhanVien nhanVien)
         {
             SqlParameter[] parameters =
@@ -79,7 +73,6 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess.ExecuteNonQuery("UpdateNhanVien", parameters);
         }
 
-        // Xóa nhân viên
         public void DeleteNhanVien(string maNV)
         {
             SqlParameter[] parameters =
@@ -90,7 +83,6 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess.ExecuteNonQuery("DeleteNhanVien", parameters);
         }
 
-        // Tìm kiếm nhân viên theo tên
         public List<NhanVien> GetNhanVienByName(string tenNV)
         {
             SqlParameter[] parameters =
@@ -119,6 +111,19 @@ namespace QLQuanCF.DataAccessLayer
             }
 
             return nhanViens;
+        }
+
+        public List<string> GetCaLamViecList()
+        {
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetCaLamViecList", null);
+            List<string> caLamViecs = new List<string>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                caLamViecs.Add(row["MaCa"].ToString());
+            }
+
+            return caLamViecs;
         }
     }
 }
