@@ -185,6 +185,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Public\password.png" />
+    <None Include="Public\user.png" />
     <None Include="Public\search.png" />
     <None Include="Public\save.png" />
     <None Include="Public\cancel.png" />
@@ -192,6 +194,7 @@
     <None Include="Public\delete.png" />
     <None Include="Public\edit.png" />
     <None Include="Public\exit.png" />
+    <None Include="Public\login.gif" />
     <Content Include="Public\logo.jpg" />
   </ItemGroup>
   <ItemGroup />

@@ -30,7 +30,7 @@ namespace QLQuanCF
 				{
 					Width = 140,
 					Height = 60,
-					Text = khuVuc.TenKV,
+					Text = khuVuc.MaKV,
 					Tag = khuVuc,
 					BackColor = Color.LightBlue
 				};
@@ -39,6 +39,7 @@ namespace QLQuanCF
 				{
 					KhuVuc selectedKV = (KhuVuc)(sender as Button).Tag;
 					LoadTableByKhuVuc(selectedKV.MaKV);
+					gbBan.Text = selectedKV.TenKV;
 				};
 
 				flpKV.Controls.Add(btnKhuVuc);

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\program files (x86)\\c#\\btl\\qlquancf\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\program files (x86)\\c#\\btl\\qlquancf\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\program files (x86)\\c#\\btl\\qlquancf\\qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fMain.cs [Design]",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs [Design]*",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T08:46:08.427Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fMain.cs",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs*",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs*",
-              "ViewState": "AgIAAIwAAAAAAAAAAAASwJUAAAAQAAAAAAAAAA==",
+              "Title": "fLogin.cs",
+              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "ToolTip": "D:\\Program Files (x86)\\C#\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T08:46:03.655Z",
+              "WhenOpened": "2024-11-04T09:24:14.957Z",
               "EditorCaption": ""
             }
           ]
