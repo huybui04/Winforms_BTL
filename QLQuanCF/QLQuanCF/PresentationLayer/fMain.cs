@@ -47,6 +47,21 @@ namespace QLQuanCF
             f.ShowDialog();
             this.Show();
         }
+
+        private void QLSPStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fSanPham f = new fSanPham();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+        private void QLLuongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fLuong f = new fLuong();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -62,5 +77,7 @@ namespace QLQuanCF
         {
 
         }
+
+        
     }
 }

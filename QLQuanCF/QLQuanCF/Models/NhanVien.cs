@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLQuanCF.Model
+namespace QLQuanCF.Models
 {
     public class NhanVien
     {

@@ -46,14 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
     <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="DataAccessLayer\NguyenLieuDAL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
     <Compile Include="DataAccessLayer\DbProcess.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
+    <Compile Include="Models\Luong.cs" />
     <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\SanPham.cs" />
     <Compile Include="PresentationLayer\DMSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="PresentationLayer\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fLuong.Designer.cs">
+      <DependentUpon>fLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\fMain.cs">
       <SubType>Form</SubType>
@@ -102,6 +114,12 @@
     <Compile Include="PresentationLayer\NhaCungCap.Designer.cs">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\DMSanPham.resx">
@@ -112,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fLuong.resx">
+      <DependentUpon>fLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
@@ -127,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\NhaCungCap.resx">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +178,8 @@
   <ItemGroup>
     <Content Include="Public\logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
