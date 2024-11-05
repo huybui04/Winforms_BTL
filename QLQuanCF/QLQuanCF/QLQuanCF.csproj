@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,7 +66,12 @@
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="Models\Ban.cs" />
+    <Compile Include="Models\CaLamViec.cs" />
+    <Compile Include="Models\ChiTietHoaDonNhap.cs" />
     <Compile Include="Models\DanhMucSanPham.cs" />
+    <Compile Include="Models\ChiTietHoaDonBan.cs" />
+    <Compile Include="Models\HoaDonBan.cs" />
+    <Compile Include="Models\HoaDonNhap.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\KhuVuc.cs" />
     <Compile Include="Models\NguyenLieu.cs" />

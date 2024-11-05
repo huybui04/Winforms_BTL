@@ -77,3 +77,22 @@ D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationL
 D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhaCungCap.resources
 D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fBan.resources
 D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhuVuc.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe.config
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.exe
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\QLQuanCF.pdb
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.AssemblyReference.cache
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fBan.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fDMSanPham.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhachHang.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhuVuc.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fLogin.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMain.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fNhanVien.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fMenuSelection.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNguyenLieu.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhaCungCap.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.Properties.Resources.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.GenerateResource.cache
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.CoreCompileInputs.cache
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.exe
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.pdb
