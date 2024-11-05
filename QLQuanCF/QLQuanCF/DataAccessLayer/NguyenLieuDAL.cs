@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using QLQuanCF.DataAccessLayer;
 
 namespace QLQuanCF.BusinessLogicLayer
@@ -43,8 +40,6 @@ namespace QLQuanCF.BusinessLogicLayer
             return lstNguyenLieu;
         }
 
-
-        // Thêm nguyên liệu
         public void AddNguyenLieu(NguyenLieu nl)
         {
             SqlParameter[] parameters =
@@ -60,7 +55,6 @@ namespace QLQuanCF.BusinessLogicLayer
             _dbProcess.ExecuteNonQuery("spAddNguyenLieu", parameters);
         }
 
-        // Cập nhật nguyên liệu
         public void UpdateNguyenLieu(NguyenLieu nl)
         {
             SqlParameter[] parameters =
@@ -77,7 +71,6 @@ namespace QLQuanCF.BusinessLogicLayer
             _dbProcess.ExecuteNonQuery("UpdateNguyenLieu", parameters);
         }
 
-        // Xóa nguyên liệu
         public void DeleteNguyenLieu(string maNL)
         {
             SqlParameter[] parameters =
@@ -88,7 +81,6 @@ namespace QLQuanCF.BusinessLogicLayer
             _dbProcess.ExecuteNonQuery("DeleteNguyenLieu", parameters);
         }
 
-        // Tìm kiếm nguyên liệu
         public List<NguyenLieu> SearchNguyenLieu(string keyword)
         {
             SqlParameter[] parameters =

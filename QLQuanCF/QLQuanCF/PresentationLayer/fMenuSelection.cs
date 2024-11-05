@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using QLQuanCF.BusinessLogicLayer;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+=======
+﻿using System;
+>>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 using System.Windows.Forms;
 
 namespace QLQuanCF

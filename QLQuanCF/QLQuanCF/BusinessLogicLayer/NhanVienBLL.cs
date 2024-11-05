@@ -1,10 +1,11 @@
 ﻿using QLQuanCF.DataAccessLayer;
+<<<<<<< HEAD
 using QLQuanCF.Models;
 using System;
+=======
+using QLQuanCF.Model;
+>>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLQuanCF.BusinessLogicLayer
 {
@@ -40,6 +41,11 @@ namespace QLQuanCF.BusinessLogicLayer
         public List<NhanVien> GetNhanVienByName(string tenNV)
         {
             return _nhanVienDAL.GetNhanVienByName(tenNV);
+        }
+
+        public List<string> GetCaLamViecList()
+        {
+            return _nhanVienDAL.GetCaLamViecList();
         }
     }
 }
