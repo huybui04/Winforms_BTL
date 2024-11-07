@@ -15,7 +15,7 @@ namespace QLQuanCF.DataAccessLayer
         }
 
         // Mở kết nối tới cơ sở dữ liệu
-        private SqlConnection GetConnection()
+        public SqlConnection GetConnection()
         {
             return new SqlConnection(_connectionString);
         }

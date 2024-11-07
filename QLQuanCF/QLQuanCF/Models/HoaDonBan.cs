@@ -14,5 +14,6 @@ namespace QLQuanCF.Models
         public DateTime? NgayBan { get; set; }
         public string MaKH { get; set; }
         public decimal? TriGia { get; set; }
+        public List<ChiTietHoaDonBan> ChiTietHoaDonBans { get; set; }
     }
 }

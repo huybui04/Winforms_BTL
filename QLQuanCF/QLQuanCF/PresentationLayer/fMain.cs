@@ -1,6 +1,7 @@
 ﻿using QLQuanCF.BusinessLogicLayer;
 using QLQuanCF.Models;
 using QLQuanCF.PresentationLayer;
+using QLQuanCF.PresentationLayer.Management;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -150,5 +151,29 @@ namespace QLQuanCF
 		{
 			this.Close();
 		}
-	}
+
+        private void QLLCLVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCaLamViec f = new fCaLamViec();
+			this.Hide();
+			f.ShowDialog();
+			this.Show();
+        }
+
+        private void QLHDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fHoaDonBan f = new fHoaDonBan(((fLogin)this.Owner).LoggedInNhanVien);
+            this.Hide();
+			f.ShowDialog();
+            this.Show();
+        }
+
+        private void QLCTHDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			fChiTietHoaDonBan f = new fChiTietHoaDonBan();
+			this.Hide();
+			f.ShowDialog();
+			this.Show();
+        }
+    }
 }

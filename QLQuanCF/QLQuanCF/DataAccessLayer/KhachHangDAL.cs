@@ -94,5 +94,53 @@ namespace QLQuanCF.DataAccessLayer
             }
             return khachHangs;
         }
+
+        public KhachHang GetKhachHangBySDT(string sdt)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SDT", sdt)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetKhachHangBySDT", parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                DataRow row = dataTable.Rows[0];
+                return new KhachHang
+                {
+                    MaKH = row["MaKH"].ToString(),
+                    TenKH = row["TenKH"].ToString(),
+                    DiaChi = row["DiaChi"].ToString(),
+                    DienThoai = row["DienThoai"].ToString()
+                };
+            }
+
+            return null;
+        }
+
+        public KhachHang GetKhachHangByMaKH(string maKH)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaKH", maKH)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetKhachHangByMaKH", parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                DataRow row = dataTable.Rows[0];
+                return new KhachHang
+                {
+                    MaKH = row["MaKH"].ToString(),
+                    TenKH = row["TenKH"].ToString(),
+                    DiaChi = row["DiaChi"].ToString(),
+                    DienThoai = row["DienThoai"].ToString()
+                };
+            }
+
+            return null;
+        }
     }
 }

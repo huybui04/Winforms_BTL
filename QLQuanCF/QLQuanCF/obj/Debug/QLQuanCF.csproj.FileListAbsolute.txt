@@ -96,3 +96,6 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.CoreCompileInputs.cache
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.exe
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.pdb
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fCaLamViec.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fChiTietHoaDonBan.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fHoaDonBan.resources

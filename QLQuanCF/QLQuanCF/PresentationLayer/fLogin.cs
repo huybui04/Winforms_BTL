@@ -2,12 +2,17 @@
 using System.Drawing.Drawing2D;
 using System.Drawing;
 using System.Windows.Forms;
+using QLQuanCF.Model;
+using System.Data;
+using QLQuanCF.BusinessLogicLayer;
 
 namespace QLQuanCF
 {
     public partial class fLogin : Form
     {
-		public fLogin()
+		private NhanVienBLL _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
+        public NhanVien LoggedInNhanVien { get; private set; }
+        public fLogin()
 		{
 			InitializeComponent();
 		}
@@ -33,17 +38,38 @@ namespace QLQuanCF
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fMain f = new fMain();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+			do
+			{
+				if (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtPassword.Text))
+				{
+					MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					return;
+				}
+			} while (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtPassword.Text));
+            
+			NhanVien emp = _nhanVienBLL.GetNhanVienByMaNV(txtMaNV.Text);
+
+
+            if (emp != null ) // TODO: thêm check password
+            {
+                LoggedInNhanVien = emp; 
+                fMain f = new fMain();
+                f.Owner = this; // Set the owner
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 		private void txtUsername_Leave(object sender, EventArgs e)
 		{
-			if (string.IsNullOrWhiteSpace(txtUsername.Text))
+			if (string.IsNullOrWhiteSpace(txtMaNV.Text))
 			{
-				txtUsername.Text = "User Name";
+				txtMaNV.Text = "Mã NV";
 			}
 		}
 
@@ -57,8 +83,8 @@ namespace QLQuanCF
 
 		private void txtUsername_Click(object sender, EventArgs e)
 		{
-			if (txtUsername.Text == "User Name") 
-				txtUsername.Text = "";
+			if (txtMaNV.Text == "Mã NV") 
+				txtMaNV.Text = "";
 		}
 
 		private void txtPassword_Click(object sender, EventArgs e)

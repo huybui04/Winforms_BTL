@@ -146,5 +146,29 @@ namespace QLQuanCF.DataAccessLayer
 
 			return bans;
 		}
+
+		public Ban GetBanByMaBan(string maBan)
+		{
+            SqlParameter[] parameters =
+			{
+				new SqlParameter("@MaBan", maBan)
+			};
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetBanByMaBan", parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+				DataRow row = dataTable.Rows[0];
+                return new Ban
+                {
+                    MaBan = row["MaBan"].ToString(),
+                    TenBan = row["TenBan"].ToString(),
+                    MaKV = row["MaKV"].ToString(),
+                    TrangThai = row["TrangThai"].ToString()
+                };
+            }
+
+            return null;
+        }
 	}
 }
