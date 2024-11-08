@@ -56,12 +56,21 @@
     <Compile Include="Classes\DbConfig.cs" />
     <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="BusinessLogicLayer\BanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
     <Compile Include="BusinessLogicLayer\DMSanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhuVucBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
+    <Compile Include="Classes\DbConfig.cs" />
+>>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="DataAccessLayer\BanDAL.cs" />
+    <Compile Include="DataAccessLayer\CaLamViecDAL.cs" />
     <Compile Include="DataAccessLayer\DMSanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\HoaDonBanDAL.cs" />
     <Compile Include="DataAccessLayer\KhachHangDAL.cs" />
     <Compile Include="DataAccessLayer\KhuVucDAL.cs" />
     <Compile Include="DataAccessLayer\NguyenLieuDAL.cs" />
@@ -70,13 +79,17 @@
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
+<<<<<<< HEAD
     <Compile Include="DataAccessLayer\UserDAL.cs" />
     <Compile Include="Models\Luong.cs" />
+=======
+>>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="Models\Ban.cs" />
     <Compile Include="Models\CaLamViec.cs" />
-    <Compile Include="Models\ChiTietHoaDonNhap.cs" />
-    <Compile Include="Models\DanhMucSanPham.cs" />
     <Compile Include="Models\ChiTietHoaDonBan.cs" />
+    <Compile Include="Models\ChiTietHoaDonNhap.cs" />
+    <Compile Include="Models\ChiTietLuong.cs" />
+    <Compile Include="Models\DanhMucSanPham.cs" />
     <Compile Include="Models\HoaDonBan.cs" />
     <Compile Include="Models\HoaDonNhap.cs" />
     <Compile Include="Models\KhachHang.cs" />
@@ -85,18 +98,39 @@
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\SanPham.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\User.cs" />
+=======
+>>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="PresentationLayer\Management\fBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Management\fBan.Designer.cs">
       <DependentUpon>fBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Management\fCaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fCaLamViec.Designer.cs">
+      <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietHoaDonBan.Designer.cs">
+      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Management\fDMSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Management\fDMSanPham.Designer.cs">
       <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonBan.Designer.cs">
+      <DependentUpon>fHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Management\fKhachHang.cs">
       <SubType>Form</SubType>
@@ -163,8 +197,17 @@
     <EmbeddedResource Include="PresentationLayer\Management\fBan.resx">
       <DependentUpon>fBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fCaLamViec.resx">
+      <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fChiTietHoaDonBan.resx">
+      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fDMSanPham.resx">
       <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fHoaDonBan.resx">
+      <DependentUpon>fHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>

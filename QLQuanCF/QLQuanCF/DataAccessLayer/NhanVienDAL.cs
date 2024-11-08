@@ -125,5 +125,30 @@ namespace QLQuanCF.DataAccessLayer
 
             return caLamViecs;
         }
+
+        public NhanVien GetNhanVienByMaNV(string MaNV)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaNV", MaNV)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetNhanVienByMaNV", parameters);
+            NhanVien nhanVien = new NhanVien();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                nhanVien.MaNV = row["MaNV"].ToString();
+                nhanVien.MaCa = row["MaCa"].ToString();
+                nhanVien.TenNV = row["TenNV"].ToString();
+                nhanVien.ChucVu = row["ChucVu"].ToString();
+                nhanVien.GioiTinh = row["GioiTinh"].ToString();
+                nhanVien.NgaySinh = row["NgaySinh"] != DBNull.Value ? (DateTime?)row["NgaySinh"] : null;
+                nhanVien.DiaChi = row["DiaChi"].ToString();
+                nhanVien.DienThoai = row["DienThoai"].ToString();
+            }
+
+            return nhanVien;
+        }
     }
 }

@@ -100,8 +100,14 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.CoreCompileInputs.cache
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.exe
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.pdb
+<<<<<<< HEAD
 >>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fBan.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fDMSanPham.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhuVuc.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhaCungCap.resources
+=======
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fCaLamViec.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fChiTietHoaDonBan.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fHoaDonBan.resources
+>>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7

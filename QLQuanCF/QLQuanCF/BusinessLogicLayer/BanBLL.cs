@@ -52,5 +52,10 @@ namespace QLQuanCF.BusinessLogicLayer
 		{
 			return _banDAL.GetBanByKhuVuc(maKV);
 		}
-	}
+        public Ban GetBanByMaBan(string maBan)
+        {
+            return _banDAL.GetBanByMaBan(maBan);
+        }
+
+    }
 }

@@ -37,5 +37,15 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             return _khachHangDAL.GetKhachHangByName(tenKH);
         }
+
+        public KhachHang GetKhachHangBySDT(string sdt)
+        {
+            return _khachHangDAL.GetKhachHangBySDT(sdt);
+        }
+
+        public KhachHang GetKhachHangByMaKH(string maKH)
+        {
+            return _khachHangDAL.GetKhachHangByMaKH(maKH);
+        }
     }
 }
