@@ -2,12 +2,16 @@
 using System.Drawing.Drawing2D;
 using System.Drawing;
 using System.Windows.Forms;
+using QLQuanCF.DataAccessLayer;
+using QLQuanCF.Models;
 
 namespace QLQuanCF
 {
     public partial class fLogin : Form
     {
-		public fLogin()
+        private UserDAL _userDAL = new UserDAL(Classes.DbConfig.connectString);
+
+        public fLogin()
 		{
 			InitializeComponent();
 		}
@@ -33,10 +37,32 @@ namespace QLQuanCF
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fMain f = new fMain();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu.");
+                return;
+            }
+
+            // Kiểm tra đăng nhập
+            bool isValid = _userDAL.CheckLogin(username, password);
+            if (isValid)
+            {
+                // Lấy thông tin người dùng và phân quyền
+                User user = _userDAL.GetUserByUsername(username);
+
+                // Mở form chính và phân quyền
+                fMain f = new fMain(user);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
+            }
         }
 
 		private void txtUsername_Leave(object sender, EventArgs e)

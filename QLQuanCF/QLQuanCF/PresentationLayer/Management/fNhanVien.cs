@@ -1,5 +1,5 @@
 ﻿using QLQuanCF.BusinessLogicLayer;
-using QLQuanCF.Model;
+using QLQuanCF.Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fSanPham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QLQuanCF\\PresentationLayer\\fSanPham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\semester_1_2024_2025\\lttq\\winforms_btl\\qlquancf\\qlquancf\\models\\hoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\models\\hoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:qlquancf\\presentationlayer\\fsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,35 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDonNhap.cs",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\Models\\HoaDonNhap.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\Models\\HoaDonNhap.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\Models\\HoaDonNhap.cs",
+              "RelativeToolTip": "QLQuanCF\\Models\\HoaDonNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:32:54.124Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fSanPham.cs",
-              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwJAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T09:27:41.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "fSanPham.cs [Design]",
-              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fSanPham.cs",
-              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fSanPham.cs [Design]",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fSanPham.cs [Design]",
+              "Title": "fMain.cs [Design]",
+              "DocumentMoniker": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
+              "ToolTip": "D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T09:27:41.288Z"
+              "WhenOpened": "2024-11-08T02:24:45.387Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -1,10 +1,6 @@
 ﻿using QLQuanCF.DataAccessLayer;
-<<<<<<< HEAD
 using QLQuanCF.Models;
 using System;
-=======
-using QLQuanCF.Model;
->>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 using System.Collections.Generic;
 
 namespace QLQuanCF.BusinessLogicLayer

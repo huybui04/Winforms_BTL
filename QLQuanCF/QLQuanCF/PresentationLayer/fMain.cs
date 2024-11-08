@@ -12,15 +12,54 @@ namespace QLQuanCF
     {
         private BanBLL _banBLL = new BanBLL(Classes.DbConfig.connectString);
 		private KhuVucBLL _khuVucBLL = new KhuVucBLL(Classes.DbConfig.connectString);
+        private NhanVienBLL _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
+        private User _currentUser;
 
-		public fMain()
+        public fMain(User user)
         {
+            _currentUser = user;
             InitializeComponent();
 			LoadKhuVuc();
 			LoadAllTables();
-		}
+            SetUserPermissions();
+        }
+        private void SetUserPermissions()
+        {
+            if (_currentUser.Role == "Admin")
+            {
+                // Hiển thị tất cả các menu cho Admin
+                //QLNVStripMenuItem.Visible = true;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = true;
+                QLDMSPStripMenuItem.Visible = true;
+                QLNCCStripMenuItem.Visible = true;
+                QLKVStripMenuItem.Visible = true;
+                QLBStripMenuItem.Visible = true;
+            }
+            else if (_currentUser.Role == "Manager")
+            {
+                // Người quản lý chỉ có quyền truy cập một số menu
+                //QLNVStripMenuItem.Visible = true;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = true;
+                QLDMSPStripMenuItem.Visible = true;
+                QLKVStripMenuItem.Visible = true;
+                QLBStripMenuItem.Visible = true;
+            }
+            else if (_currentUser.Role == "Staff")
+            {
+                // Nhân viên chỉ có quyền truy cập một số menu hạn chế
+                //QLNVStripMenuItem.Visible = false;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = false;
+                QLDMSPStripMenuItem.Visible = false;
+                QLNCCStripMenuItem.Visible = false;
+                QLKVStripMenuItem.Visible = false;
+                QLBStripMenuItem.Visible = true;
+            }
+        }
 
-		void LoadKhuVuc()
+        void LoadKhuVuc()
 		{
 			List<KhuVuc> khuVucList = _khuVucBLL.GetAllKhuVuc();
 
@@ -113,26 +152,6 @@ namespace QLQuanCF
             f.ShowDialog();
             this.Show();
         }
-<<<<<<< HEAD
-
-        private void QLSPStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fSanPham f = new fSanPham();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-        private void QLLuongToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fLuong f = new fLuong();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-=======
->>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 
         private void QLDMSPStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -158,12 +177,6 @@ namespace QLQuanCF
 			this.Show();
 		}
 
-<<<<<<< HEAD
-        }
-
-        
-    }
-=======
 		private void QLBStripMenuItem_Click(object sender, EventArgs e)
 		{
             fBan f = new fBan();
@@ -172,10 +185,17 @@ namespace QLQuanCF
 			this.Show();
 		}
 
-		private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QLSPtripMenuItem_Click(object sender, EventArgs e)
+        {
+            fSanPham f = new fSanPham();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 	}
->>>>>>> 3e3d3c8db24084d5b82365d244268a861d54afcf
 }

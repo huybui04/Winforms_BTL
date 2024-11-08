@@ -41,10 +41,11 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnExitNCC = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -52,13 +53,13 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.panel26 = new System.Windows.Forms.Panel();
             this.btnChon = new System.Windows.Forms.Button();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pbSP = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cbMaDM = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel50.SuspendLayout();
             this.panel52.SuspendLayout();
             this.panel53.SuspendLayout();
@@ -71,9 +72,9 @@
             this.panel13.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel26.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSP)).BeginInit();
             this.panel8.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel50
@@ -166,9 +167,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(378, 16);
+            this.btnSearch.Image = global::QLQuanCF.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(366, 26);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(118, 61);
+            this.btnSearch.Size = new System.Drawing.Size(130, 33);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -184,7 +187,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnSave);
+            this.groupBox3.Controls.Add(this.btnExitNCC);
             this.groupBox3.Controls.Add(this.btnAdd);
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnEdit);
@@ -195,20 +198,28 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             // 
-            // btnSave
+            // btnExitNCC
             // 
-            this.btnSave.Location = new System.Drawing.Point(649, 16);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(136, 61);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnExitNCC.Image = global::QLQuanCF.Properties.Resources.exit;
+            this.btnExitNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExitNCC.Location = new System.Drawing.Point(685, 16);
+            this.btnExitNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExitNCC.Name = "btnExitNCC";
+            this.btnExitNCC.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
+            this.btnExitNCC.Size = new System.Drawing.Size(123, 61);
+            this.btnExitNCC.TabIndex = 4;
+            this.btnExitNCC.Text = "Thoát";
+            this.btnExitNCC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExitNCC.UseVisualStyleBackColor = true;
+            this.btnExitNCC.Click += new System.EventHandler(this.btnExitNCC_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(15, 16);
+            this.btnAdd.Image = global::QLQuanCF.Properties.Resources.add;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(30, 16);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(123, 61);
+            this.btnAdd.Size = new System.Drawing.Size(113, 61);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -216,9 +227,11 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(223, 16);
+            this.btnDelete.Image = global::QLQuanCF.Properties.Resources.delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(249, 16);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(123, 61);
+            this.btnDelete.Size = new System.Drawing.Size(119, 61);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -226,13 +239,27 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(435, 16);
+            this.btnEdit.Image = global::QLQuanCF.Properties.Resources.edit;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(473, 16);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(123, 61);
+            this.btnEdit.Size = new System.Drawing.Size(122, 61);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnUpdateSP_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::QLQuanCF.Properties.Resources.save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(91, 524);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 61);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveNCC_Click);
             // 
             // panel1
             // 
@@ -275,7 +302,7 @@
             this.dataSP.RowTemplate.Height = 24;
             this.dataSP.Size = new System.Drawing.Size(874, 598);
             this.dataSP.TabIndex = 0;
-            this.dataSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSanPham_SelectionChanged);
+            this.dataSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSanPham_CellClick);
             // 
             // panel13
             // 
@@ -289,8 +316,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnChon);
             this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnChon);
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel26);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 83);
@@ -301,13 +329,28 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(241, 467);
+            this.btnCancel.Image = global::QLQuanCF.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(287, 524);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(119, 35);
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
+            this.btnCancel.Size = new System.Drawing.Size(123, 61);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancelSP_Click);
+            // 
+            // btnChon
+            // 
+            this.btnChon.Location = new System.Drawing.Point(186, 458);
+            this.btnChon.Name = "btnChon";
+            this.btnChon.Size = new System.Drawing.Size(104, 35);
+            this.btnChon.TabIndex = 1;
+            this.btnChon.Text = "Chọn";
+            this.btnChon.UseVisualStyleBackColor = true;
+            this.btnChon.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
             // panel26
             // 
@@ -321,15 +364,13 @@
             this.panel26.Size = new System.Drawing.Size(496, 429);
             this.panel26.TabIndex = 4;
             // 
-            // btnChon
+            // panel2
             // 
-            this.btnChon.Location = new System.Drawing.Point(112, 467);
-            this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(104, 35);
-            this.btnChon.TabIndex = 1;
-            this.btnChon.Text = "Chọn";
-            this.btnChon.UseVisualStyleBackColor = true;
-            this.btnChon.Click += new System.EventHandler(this.btnSelectImage_Click);
+            this.panel2.Controls.Add(this.pbSP);
+            this.panel2.Location = new System.Drawing.Point(3, 196);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(490, 230);
+            this.panel2.TabIndex = 5;
             // 
             // pbSP
             // 
@@ -367,14 +408,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã danh mục";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pbSP);
-            this.panel2.Location = new System.Drawing.Point(3, 196);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 230);
-            this.panel2.TabIndex = 5;
-            // 
             // fSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -399,10 +432,10 @@
             this.panel13.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbSP)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,7 +465,6 @@
         private System.Windows.Forms.DataGridView dataSP;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.ComboBox cbMaDM;
@@ -440,5 +472,7 @@
         private System.Windows.Forms.PictureBox pbSP;
         private System.Windows.Forms.Button btnChon;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnExitNCC;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
