@@ -47,7 +47,7 @@ namespace QLQuanCF.DataAccessLayer
             }
         }
 
-        // Thực thi một stored procedure và trả về một DataTable
+        //Thực thi một stored procedure và trả về một DataTable
         public DataTable ExecuteQuery(string storedProcedure, SqlParameter[] parameters)
         {
             using (SqlConnection connection = GetConnection())

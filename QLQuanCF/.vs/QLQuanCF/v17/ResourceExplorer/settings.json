@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["D:\\Semester_1_2024_2025\\LTTQ\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.resx"],"VisibleColumnKeys":["name","neutral-value"]}
+=======
 {"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.resx"],"VisibleColumnKeys":["name","neutral-value"]}
+>>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7

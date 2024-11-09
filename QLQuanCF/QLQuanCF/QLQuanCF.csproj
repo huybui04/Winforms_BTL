@@ -49,16 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\UserBLL.cs" />
+    <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="BusinessLogicLayer\BanBLL.cs" />
     <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
     <Compile Include="BusinessLogicLayer\DMSanPhamBLL.cs" />
     <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhuVucBLL.cs" />
-    <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
-    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
-    <Compile Include="Classes\DbConfig.cs" />
     <Compile Include="DataAccessLayer\BanDAL.cs" />
     <Compile Include="DataAccessLayer\CaLamViecDAL.cs" />
     <Compile Include="DataAccessLayer\DMSanPhamDAL.cs" />
@@ -71,6 +74,8 @@
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\UserDAL.cs" />
+    <Compile Include="Models\Luong.cs" />
     <Compile Include="Models\Ban.cs" />
     <Compile Include="Models\CaLamViec.cs" />
     <Compile Include="Models\ChiTietHoaDonBan.cs" />
@@ -85,6 +90,7 @@
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="PresentationLayer\Management\fBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     <Compile Include="PresentationLayer\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Management\fLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLuong.Designer.cs">
+      <DependentUpon>fLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     <Compile Include="PresentationLayer\Management\fNhaCungCap.Designer.cs">
       <DependentUpon>fNhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Management\fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\Management\fBan.resx">
@@ -189,6 +207,9 @@
     <EmbeddedResource Include="PresentationLayer\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fLuong.resx">
+      <DependentUpon>fLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fNhaCungCap.resx">
       <DependentUpon>fNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,6 +264,8 @@
     <None Include="Public\login.gif" />
     <Content Include="Public\logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,16 +2,15 @@
 using System.Drawing.Drawing2D;
 using System.Drawing;
 using System.Windows.Forms;
-using QLQuanCF.Model;
-using System.Data;
-using QLQuanCF.BusinessLogicLayer;
+using QLQuanCF.DataAccessLayer;
+using QLQuanCF.Models;
 
 namespace QLQuanCF
 {
     public partial class fLogin : Form
     {
-		private NhanVienBLL _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
-        public NhanVien LoggedInNhanVien { get; private set; }
+        private UserDAL _userDAL = new UserDAL(Classes.DbConfig.connectString);
+
         public fLogin()
 		{
 			InitializeComponent();
@@ -38,38 +37,38 @@ namespace QLQuanCF
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-			do
-			{
-				if (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtPassword.Text))
-				{
-					MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-					return;
-				}
-			} while (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtPassword.Text));
-            
-			NhanVien emp = _nhanVienBLL.GetNhanVienByMaNV(txtMaNV.Text);
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-
-            if (emp != null ) // TODO: thêm check password
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                LoggedInNhanVien = emp; 
-                fMain f = new fMain();
-                f.Owner = this; // Set the owner
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu.");
+                return;
+            }
+
+            // Kiểm tra đăng nhập
+            bool isValid = _userDAL.CheckLogin(username, password);
+            if (isValid)
+            {
+                // Lấy thông tin người dùng và phân quyền
+                User user = _userDAL.GetUserByUsername(username);
+                // Mở form chính và phân quyền
+                fMain f = new fMain(user);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
             }
         }
 
 		private void txtUsername_Leave(object sender, EventArgs e)
 		{
-			if (string.IsNullOrWhiteSpace(txtMaNV.Text))
+			if (string.IsNullOrWhiteSpace(txtUsername.Text))
 			{
-				txtMaNV.Text = "Mã NV";
+				txtUsername.Text = "User Name";
 			}
 		}
 
@@ -83,8 +82,8 @@ namespace QLQuanCF
 
 		private void txtUsername_Click(object sender, EventArgs e)
 		{
-			if (txtMaNV.Text == "Mã NV") 
-				txtMaNV.Text = "";
+			if (txtUsername.Text == "User Name") 
+				txtUsername.Text = "";
 		}
 
 		private void txtPassword_Click(object sender, EventArgs e)

@@ -13,15 +13,54 @@ namespace QLQuanCF
     {
         private BanBLL _banBLL = new BanBLL(Classes.DbConfig.connectString);
 		private KhuVucBLL _khuVucBLL = new KhuVucBLL(Classes.DbConfig.connectString);
+        private NhanVienBLL _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
+        private User _currentUser;
 
-		public fMain()
+        public fMain(User user)
         {
+            _currentUser = user;
             InitializeComponent();
 			LoadKhuVuc();
 			LoadAllTables();
-		}
+            SetUserPermissions();
+        }
+        private void SetUserPermissions()
+        {
+            if (_currentUser.Role == "Admin")
+            {
+                // Hiển thị tất cả các menu cho Admin
+                //QLNVStripMenuItem.Visible = true;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = true;
+                QLDMSPStripMenuItem.Visible = true;
+                QLNCCStripMenuItem.Visible = true;
+                QLKVStripMenuItem.Visible = true;
+                QLBStripMenuItem.Visible = true;
+            }
+            else if (_currentUser.Role == "Manager")
+            {
+                // Người quản lý chỉ có quyền truy cập một số menu
+                //QLNVStripMenuItem.Visible = true;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = true;
+                QLDMSPStripMenuItem.Visible = true;
+                QLKVStripMenuItem.Visible = true;
+                QLBStripMenuItem.Visible = true;
+            }
+            else if (_currentUser.Role == "Staff")
+            {
+                // Nhân viên chỉ có quyền truy cập một số menu hạn chế
+                //QLNVStripMenuItem.Visible = false;
+                //QLKHStripMenuItem.Visible = true;
+                //QLNLStripMenuItem.Visible = false;
+                QLDMSPStripMenuItem.Visible = false;
+                QLNCCStripMenuItem.Visible = false;
+                QLKVStripMenuItem.Visible = false;
+                QLBStripMenuItem.Visible = true;
+            }
+        }
 
-		void LoadKhuVuc()
+        void LoadKhuVuc()
 		{
 			List<KhuVuc> khuVucList = _khuVucBLL.GetAllKhuVuc();
 
@@ -147,33 +186,56 @@ namespace QLQuanCF
 			this.Show();
 		}
 
-		private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
-        private void QLLCLVToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QLSPtripMenuItem_Click(object sender, EventArgs e)
         {
-            fCaLamViec f = new fCaLamViec();
-			this.Hide();
-			f.ShowDialog();
-			this.Show();
-        }
-
-        private void QLHDBToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fHoaDonBan f = new fHoaDonBan(((fLogin)this.Owner).LoggedInNhanVien);
+            fSanPham f = new fSanPham();
             this.Hide();
-			f.ShowDialog();
+            f.ShowDialog();
             this.Show();
         }
 
-        private void QLCTHDBToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QLCLVtripMenuItem_Click(object sender, EventArgs e)
         {
-			fChiTietHoaDonBan f = new fChiTietHoaDonBan();
-			this.Hide();
-			f.ShowDialog();
-			this.Show();
+            fCaLamViec f = new fCaLamViec();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
-    }
+        private void QLHDBtripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_currentUser != null)
+            {
+                NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
+                
+                if (loggedInNhanVien != null)
+                {
+                    fHoaDonBan f = new fHoaDonBan(loggedInNhanVien);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin nhân viên.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thông tin người dùng không hợp lệ.");
+            }
+        }
+
+        private void QLCTHDBtripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChiTietHoaDonBan f = new fChiTietHoaDonBan();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+	}
 }

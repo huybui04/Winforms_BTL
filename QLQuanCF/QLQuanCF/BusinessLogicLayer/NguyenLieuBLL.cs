@@ -1,4 +1,5 @@
-﻿using QLQuanCF.Models;
+﻿using QLQuanCF.DataAccessLayer;
+using QLQuanCF.Models;
 using System.Collections.Generic;
 
 namespace QLQuanCF.BusinessLogicLayer
