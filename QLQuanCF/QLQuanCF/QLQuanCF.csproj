@@ -62,11 +62,6 @@
     <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhuVucBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
-    <Compile Include="Classes\DbConfig.cs" />
->>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="DataAccessLayer\BanDAL.cs" />
     <Compile Include="DataAccessLayer\CaLamViecDAL.cs" />
     <Compile Include="DataAccessLayer\DMSanPhamDAL.cs" />
@@ -79,11 +74,8 @@
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
-<<<<<<< HEAD
     <Compile Include="DataAccessLayer\UserDAL.cs" />
     <Compile Include="Models\Luong.cs" />
-=======
->>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="Models\Ban.cs" />
     <Compile Include="Models\CaLamViec.cs" />
     <Compile Include="Models\ChiTietHoaDonBan.cs" />
@@ -98,10 +90,7 @@
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\SanPham.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\User.cs" />
-=======
->>>>>>> ad3e75cc11dd7f70a7eb0d2b1e3f3cca8d0abaa7
     <Compile Include="PresentationLayer\Management\fBan.cs">
       <SubType>Form</SubType>
     </Compile>

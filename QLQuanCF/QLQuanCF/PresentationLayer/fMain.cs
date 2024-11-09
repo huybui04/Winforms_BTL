@@ -194,33 +194,48 @@ namespace QLQuanCF
             this.Show();
         }
 
+        private void QLCLVtripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCaLamViec f = new fCaLamViec();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+        private void QLHDBtripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_currentUser != null)
+            {
+                NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
+                
+                if (loggedInNhanVien != null)
+                {
+                    fHoaDonBan f = new fHoaDonBan(loggedInNhanVien);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin nhân viên.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thông tin người dùng không hợp lệ.");
+            }
+        }
+
+        private void QLCTHDBtripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChiTietHoaDonBan f = new fChiTietHoaDonBan();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-
-        private void QLLCLVToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fCaLamViec f = new fCaLamViec();
-			this.Hide();
-			f.ShowDialog();
-			this.Show();
-        }
-
-        private void QLHDBToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fHoaDonBan f = new fHoaDonBan(((fLogin)this.Owner).LoggedInNhanVien);
-            this.Hide();
-			f.ShowDialog();
-            this.Show();
-        }
-
-        private void QLCTHDBToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-			fChiTietHoaDonBan f = new fChiTietHoaDonBan();
-			this.Hide();
-			f.ShowDialog();
-			this.Show();
-        }
-    }
+	}
 }

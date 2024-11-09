@@ -30,7 +30,8 @@ namespace QLQuanCF.DataAccessLayer
                 {
                     Username = row["Username"].ToString(),
                     Password = row["Password"].ToString(),
-                    Role = row["Role"].ToString()
+                    Role = row["Role"].ToString(),
+                    MaNV = row["MaNV"].ToString()
                 };
 
                 users.Add(user);
@@ -59,7 +60,8 @@ namespace QLQuanCF.DataAccessLayer
             {
                 new SqlParameter("@Username", user.Username),
                 new SqlParameter("@Password", user.Password),
-                new SqlParameter("@Role", user.Role)
+                new SqlParameter("@Role", user.Role),
+                new SqlParameter("@MaNV", user.MaNV)
             };
 
             _dbProcess.ExecuteNonQuery("AddUser", parameters);
@@ -72,7 +74,8 @@ namespace QLQuanCF.DataAccessLayer
             {
                 new SqlParameter("@Username", user.Username),
                 new SqlParameter("@Password", user.Password),
-                new SqlParameter("@Role", user.Role)
+                new SqlParameter("@Role", user.Role),
+                new SqlParameter("@MaNV", user.MaNV)
             };
 
             _dbProcess.ExecuteNonQuery("UpdateUser", parameters);
@@ -116,7 +119,8 @@ namespace QLQuanCF.DataAccessLayer
                 {
                     Username = row["Username"].ToString(),
                     Password = row["Password"].ToString(),
-                    Role = row["Role"].ToString()
+                    Role = row["Role"].ToString(),
+                    MaNV = row["MaNV"].ToString()              
                 };
             }
 

@@ -31,13 +31,14 @@ namespace QLQuanCF.DataAccessLayer
                     MaCa = row["MaCa"] != DBNull.Value ? row["MaCa"].ToString() : null,
                     TenCa = row["TenCa"] != DBNull.Value ? row["TenCa"].ToString() : null,
                     Luong = row["Luong"] != DBNull.Value ? (decimal?)row["Luong"] : null,
-                    GioBatDau = row["GioBatDau"] != DBNull.Value ? (TimeSpan?)row["GioBatDau"] : null,
-                    GioKetThuc = row["GioKetThuc"] != DBNull.Value ? (TimeSpan?)row["GioKetThuc"] : null
+                    GioBatDau = row["GioBatDau"] != DBNull.Value ? (row["GioBatDau"] is TimeSpan ? (TimeSpan?)row["GioBatDau"] : null) : null,
+                    GioKetThuc = row["GioKetThuc"] != DBNull.Value ? (row["GioKetThuc"] is TimeSpan ? (TimeSpan?)row["GioKetThuc"] : null) : null
                 };
                 caLamViecs.Add(ca);
             }
             return caLamViecs;
         }
+
         public void DeleteCaLamViec(string maCa)
         {
             SqlParameter[] parameters =
