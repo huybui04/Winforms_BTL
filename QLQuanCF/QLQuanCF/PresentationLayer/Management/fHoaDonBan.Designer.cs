@@ -366,17 +366,15 @@
             // 
             // dataHDB
             // 
-            this.dataHDB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataHDB.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataHDB.Location = new System.Drawing.Point(2, 15);
             this.dataHDB.Margin = new System.Windows.Forms.Padding(2);
             this.dataHDB.Name = "dataHDB";
             this.dataHDB.ReadOnly = true;
             this.dataHDB.RowHeadersWidth = 51;
             this.dataHDB.RowTemplate.Height = 24;
-            this.dataHDB.Size = new System.Drawing.Size(662, 312);
+            this.dataHDB.Size = new System.Drawing.Size(664, 312);
             this.dataHDB.TabIndex = 0;
             this.dataHDB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataHDB_CellClick);
             // 
@@ -395,17 +393,15 @@
             // 
             // dataChiTietHoaDonBan
             // 
-            this.dataChiTietHoaDonBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataChiTietHoaDonBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataChiTietHoaDonBan.Location = new System.Drawing.Point(2, 324);
+            this.dataChiTietHoaDonBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataChiTietHoaDonBan.Location = new System.Drawing.Point(2, 327);
             this.dataChiTietHoaDonBan.Margin = new System.Windows.Forms.Padding(2);
             this.dataChiTietHoaDonBan.Name = "dataChiTietHoaDonBan";
             this.dataChiTietHoaDonBan.ReadOnly = true;
             this.dataChiTietHoaDonBan.RowHeadersWidth = 51;
             this.dataChiTietHoaDonBan.RowTemplate.Height = 24;
-            this.dataChiTietHoaDonBan.Size = new System.Drawing.Size(662, 341);
+            this.dataChiTietHoaDonBan.Size = new System.Drawing.Size(664, 338);
             this.dataChiTietHoaDonBan.TabIndex = 1;
             this.dataChiTietHoaDonBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataHDB_CellClick);
             this.dataChiTietHoaDonBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChiTietHoaDonBan_CellDoubleClick);

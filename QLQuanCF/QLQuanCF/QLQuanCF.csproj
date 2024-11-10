@@ -49,11 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\ChiTietLuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
     <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
     <Compile Include="BusinessLogicLayer\UserBLL.cs" />
     <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\ChiTietLuongDAL.cs" />
     <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="BusinessLogicLayer\BanBLL.cs" />
     <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
@@ -103,12 +105,6 @@
     <Compile Include="PresentationLayer\Management\fCaLamViec.Designer.cs">
       <DependentUpon>fCaLamViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Management\fChiTietHoaDonBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Management\fChiTietHoaDonBan.Designer.cs">
-      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\Management\fDMSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +134,12 @@
     </Compile>
     <Compile Include="PresentationLayer\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLichLamViec.Designer.cs">
+      <DependentUpon>fLichLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Management\fLuong.cs">
       <SubType>Form</SubType>
@@ -181,6 +183,12 @@
     <Compile Include="PresentationLayer\Management\fSanPham.Designer.cs">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ShiftRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ShiftRegister.Designer.cs">
+      <DependentUpon>ShiftRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\Management\fBan.resx">
@@ -188,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fCaLamViec.resx">
       <DependentUpon>fCaLamViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Management\fChiTietHoaDonBan.resx">
-      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fDMSanPham.resx">
       <DependentUpon>fDMSanPham.cs</DependentUpon>
@@ -206,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fLichLamViec.resx">
+      <DependentUpon>fLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fLuong.resx">
       <DependentUpon>fLuong.cs</DependentUpon>
@@ -227,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fSanPham.resx">
       <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ShiftRegister.resx">
+      <DependentUpon>ShiftRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
