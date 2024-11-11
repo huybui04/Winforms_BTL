@@ -44,6 +44,7 @@ namespace QLQuanCF.PresentationLayer.Management
             ClearInputFields();
             LoadCaLamViec();
             LoadNhanVien();
+            LoadData(); 
         }
 
         private void LoadCaLamViec()

@@ -28,25 +28,12 @@ namespace QLQuanCF
         {
             if (_currentUser.Role == "Admin")
             {
-                // Hiển thị tất cả các menu cho Admin
-                //QLNVStripMenuItem.Visible = true;
-                //QLKHStripMenuItem.Visible = true;
-                //QLNLStripMenuItem.Visible = true;
-                QLDMSPStripMenuItem.Visible = true;
-                QLNCCStripMenuItem.Visible = true;
-                QLKVStripMenuItem.Visible = true;
-                QLBStripMenuItem.Visible = true;
+
             }
             else if (_currentUser.Role == "Staff")
             {
-                // Nhân viên chỉ có quyền truy cập một số menu hạn chế
-                //QLNVStripMenuItem.Visible = false;
-                //QLKHStripMenuItem.Visible = true;
-                //QLNLStripMenuItem.Visible = false;
-                QLDMSPStripMenuItem.Visible = false;
-                QLNCCStripMenuItem.Visible = false;
-                QLKVStripMenuItem.Visible = false;
-                QLBStripMenuItem.Visible = true;
+                adminToolStripMenuItem.Visible = false;
+                BaoCaoThongKeToolStripMenuItem.Visible = false;  
             }
         }
 

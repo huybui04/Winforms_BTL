@@ -58,7 +58,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbSP = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.cbMaDM = new System.Windows.Forms.ComboBox();
+            this.cbDM = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel50.SuspendLayout();
             this.panel52.SuspendLayout();
@@ -171,7 +171,7 @@
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Location = new System.Drawing.Point(366, 26);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(130, 33);
+            this.btnSearch.Size = new System.Drawing.Size(132, 33);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -384,29 +384,29 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.cbMaDM);
+            this.panel8.Controls.Add(this.cbDM);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Location = new System.Drawing.Point(1, 100);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(494, 42);
             this.panel8.TabIndex = 2;
             // 
-            // cbMaDM
+            // cbDM
             // 
-            this.cbMaDM.FormattingEnabled = true;
-            this.cbMaDM.Location = new System.Drawing.Point(141, 7);
-            this.cbMaDM.Name = "cbMaDM";
-            this.cbMaDM.Size = new System.Drawing.Size(165, 28);
-            this.cbMaDM.TabIndex = 2;
+            this.cbDM.FormattingEnabled = true;
+            this.cbDM.Location = new System.Drawing.Point(141, 7);
+            this.cbDM.Name = "cbDM";
+            this.cbDM.Size = new System.Drawing.Size(165, 28);
+            this.cbDM.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Mã danh mục";
+            this.label4.Text = "Danh mục";
             // 
             // fSanPham
             // 
@@ -467,7 +467,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ComboBox cbMaDM;
+        private System.Windows.Forms.ComboBox cbDM;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbSP;
         private System.Windows.Forms.Button btnChon;

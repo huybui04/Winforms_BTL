@@ -42,8 +42,9 @@
             this.quảnLýCaLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýHóaĐơnBánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BaoCaoThongKeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKýLịchLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +78,6 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.gbBan = new System.Windows.Forms.GroupBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -95,7 +95,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
+            this.BaoCaoThongKeToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem,
             this.đăngKýLịchLàmViệcToolStripMenuItem,
             this.ExitToolStripMenuItem});
@@ -200,20 +200,27 @@
             this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Text = "Quản lý lịch làm việc của nhân viên";
             this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click);
             // 
-            // thốngKêToolStripMenuItem
+            // BaoCaoThongKeToolStripMenuItem
             // 
-            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BaoCaoThongKeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thốngKêLươngToolStripMenuItem,
             this.báoCáoDoanhThuToolStripMenuItem});
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(167, 29);
-            this.thốngKêToolStripMenuItem.Text = "Báo cáo thống kê";
+            this.BaoCaoThongKeToolStripMenuItem.Name = "BaoCaoThongKeToolStripMenuItem";
+            this.BaoCaoThongKeToolStripMenuItem.Size = new System.Drawing.Size(167, 29);
+            this.BaoCaoThongKeToolStripMenuItem.Text = "Báo cáo thống kê";
             // 
             // thốngKêLươngToolStripMenuItem
             // 
             this.thốngKêLươngToolStripMenuItem.Name = "thốngKêLươngToolStripMenuItem";
             this.thốngKêLươngToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.thốngKêLươngToolStripMenuItem.Text = "Thống kê lương";
+            // 
+            // báoCáoDoanhThuToolStripMenuItem
+            // 
+            this.báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
+            this.báoCáoDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.báoCáoDoanhThuToolStripMenuItem.Text = "Báo cáo doanh thu";
+            this.báoCáoDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.BaoCaoDTToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -554,13 +561,6 @@
             this.flpTable.Size = new System.Drawing.Size(528, 500);
             this.flpTable.TabIndex = 0;
             // 
-            // báoCáoDoanhThuToolStripMenuItem
-            // 
-            this.báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
-            this.báoCáoDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.báoCáoDoanhThuToolStripMenuItem.Text = "Báo cáo doanh thu";
-            this.báoCáoDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.BaoCaoDTToolStripMenuItem_Click);
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -637,7 +637,7 @@
 		private System.Windows.Forms.ToolStripMenuItem QLKVStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem QLBStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýSảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BaoCaoThongKeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýCaLàmViệcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýHóaĐơnBánToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngKýLịchLàmViệcToolStripMenuItem;

@@ -37,5 +37,10 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             return _danhMucSanPhamDAL.GetDanhMucSanPhamByName(tenDM);
         }
+
+        public string GetTenDanhMucSanPhamByMa(string maDM)
+        {
+            return _danhMucSanPhamDAL.GetTenDanhMucSanPhamByMa(maDM);
+        }
     }
 }

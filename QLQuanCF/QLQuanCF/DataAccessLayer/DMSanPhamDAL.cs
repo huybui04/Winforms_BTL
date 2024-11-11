@@ -86,5 +86,23 @@ namespace QLQuanCF.DataAccessLayer
             }
             return danhMucs;
         }
+
+        public string GetTenDanhMucSanPhamByMa(string maDM)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaDM", maDM)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetTenDanhMucSanPhamByMa", parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                return dataTable.Rows[0]["TenDM"].ToString();
+            }
+
+            return "";
+        }
+
     }
 }

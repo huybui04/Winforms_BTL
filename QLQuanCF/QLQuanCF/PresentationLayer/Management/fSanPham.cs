@@ -16,14 +16,16 @@ namespace QLQuanCF.PresentationLayer
     public partial class fSanPham : Form
     {
         private SanPhamBLL _sanPhamBLL;
+        private DMSanPhamBLL _DMSanPhamBLL;
         private ErrorProvider errorProvider = new ErrorProvider();
-        private string selectedImagePath; // Variable to store the selected image path
+        private string selectedImagePath;
         private bool isAdding, isEditing;
 
         public fSanPham()
         {
             InitializeComponent();
             _sanPhamBLL = new SanPhamBLL(Classes.DbConfig.connectString);
+            _DMSanPhamBLL = new DMSanPhamBLL(Classes.DbConfig.connectString);
             LoadSanPhamData();
             ShowDetail(false);
             SetButtonState(true, false, false, false, false);
@@ -35,11 +37,21 @@ namespace QLQuanCF.PresentationLayer
             dataSP.DataSource = sanPhamList;
         }
 
+        private void LoadDanhMucData()
+        {
+            var danhMucList = _DMSanPhamBLL.GetAllDanhMucSanPham();
+            cbDM.DataSource = danhMucList;
+            cbDM.DisplayMember = "TenDM"; 
+            cbDM.ValueMember = "MaDM";
+            cbDM.SelectedIndex = -1; 
+        }
+
+
         private void ShowDetail(bool detail)
         {
             txtTenSP.Enabled = detail;
             txtGiaSP.Enabled = detail;
-            cbMaDM.Enabled = detail;
+            cbDM.Enabled = detail;
             btnChon.Enabled = detail;
         }
 
@@ -92,7 +104,7 @@ namespace QLQuanCF.PresentationLayer
         {
             errorProvider.Clear();
             txtMaSP.Clear();
-            cbMaDM.SelectedIndex = -1; 
+            cbDM.SelectedIndex = -1; 
             txtTenSP.Clear();
             txtGiaSP.Clear();
             pbSP.Image = null; 
@@ -100,34 +112,9 @@ namespace QLQuanCF.PresentationLayer
         }
         private void btnAddSP_Click(object sender, EventArgs e)
         {
-            //// Validate input before adding
-            //if (!ValidateInput())
-            //{
-            //    return; // Stop execution if validation fails
-            //}
-
-            //// Extract the image name from the selected image path
-            //string imageFileName = Path.GetFileName(selectedImagePath); // Get only the file name
-
-            //var sanPham = new SanPham
-            //{
-            //    MaSP = txtMaSP.Text,
-            //    TenSP = txtTenSP.Text,
-            //    MaDM = cbMaDM.Text, // Assuming cbMaDM is a ComboBox for category
-            //    Gia = decimal.Parse(txtGiaSP.Text),
-            //    Anh = imageFileName // Save the image file name
-            //};
-
-            //// Copy the image to the Images folder
-            //string destPath = Path.Combine(Application.StartupPath, "Images", imageFileName);
-            //File.Copy(selectedImagePath, destPath, true); // Overwrite if exists
-
-            //_sanPhamBLL.AddSanPham(sanPham);
-            //LoadSanPhamData();
-            //ClearInputFields();
-
             ClearInputFields();
             ShowDetail(true);
+            LoadDanhMucData();
             SetButtonState(false, false, false, true, true);
             ResetFlags();
             isAdding = true;
@@ -136,74 +123,14 @@ namespace QLQuanCF.PresentationLayer
 
         private void btnUpdateSP_Click(object sender, EventArgs e)
         {
-            //// Validate input before updating
-            //if (!ValidateInput())
-            //{
-            //    return; // Stop execution if validation fails
-            //}
-
-            //// Ensure that an image has been selected
-            ////if (string.IsNullOrEmpty(selectedImagePath))
-            ////{
-            ////    MessageBox.Show("Please select an image.");
-            ////    return;
-            ////}
-
-            //// Extract the image name from the selected image path
-            //string imageFileName = Path.GetFileName(selectedImagePath); // Get only the file name
-
-            //var sanPham = new SanPham
-            //{
-            //    MaSP = txtMaSP.Text,
-            //    TenSP = txtTenSP.Text,
-            //    MaDM = cbMaDM.Text,
-            //    Gia = decimal.Parse(txtGiaSP.Text),
-            //    Anh = imageFileName // Save the image file name to the database
-            //};
-
-            //// Define the destination folder for storing the image
-            //string imagesFolder = Path.Combine(Application.StartupPath, "Images");
-
-            //// Ensure the Images folder exists
-            //if (!Directory.Exists(imagesFolder))
-            //{
-            //    Directory.CreateDirectory(imagesFolder);
-            //}
-
-            //// Copy the image to the Images folder in the Debug directory
-            //string destPath = Path.Combine(imagesFolder, imageFileName);
-            //try
-            //{
-            //    File.Copy(selectedImagePath, destPath, true); // Overwrite if exists
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error copying image: " + ex.Message);
-            //    return;
-            //}
-
-            //// Update the product information in the database
-            //_sanPhamBLL.UpdateSanPham(sanPham);
-
-            //// Refresh the data grid or list to reflect the updated product
-            //LoadSanPhamData();
-
-            //// Clear input fields after updating
-            //ClearInputFields();
-
             ShowDetail(true);
             SetButtonState(false, false, false, true, true);
             ResetFlags();
             isEditing = true;
         }
 
-
         private void btnDeleteSP_Click(object sender, EventArgs e)
         {
-            //string maSP = txtMaSP.Text;
-            //_sanPhamBLL.DeleteSanPham(maSP);
-            //LoadSanPhamData();
-            //ClearInputFields();
             if (MessageBox.Show("Bạn có chắc chắn muốn sản phẩm này không?", "Xóa nhà sản phẩm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ResetFlags();
@@ -218,10 +145,6 @@ namespace QLQuanCF.PresentationLayer
 
         private void btnSearchSP_Click(object sender, EventArgs e)
         {
-            //string tenSP = txtSearch.Text;
-            //var sanPhamList = _sanPhamBLL.GetSanPhamByName(tenSP);
-            //dataSP.DataSource = sanPhamList;
-
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
             {
                 LoadSanPhamData(); return;
@@ -264,7 +187,7 @@ namespace QLQuanCF.PresentationLayer
                 MaSP = txtMaSP.Text,
                 TenSP = txtTenSP.Text,
                 Gia = gia,
-                MaDM = cbMaDM.Text,
+                MaDM = cbDM.SelectedValue?.ToString(),
                 Anh = !string.IsNullOrEmpty(pbSP.Text) ? pbSP.Text : null, // Lưu tên ảnh nếu có
             };
 
@@ -280,8 +203,6 @@ namespace QLQuanCF.PresentationLayer
             ResetFlags();
             txtSearch.Focus();
         }
-
-
 
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
@@ -304,7 +225,7 @@ namespace QLQuanCF.PresentationLayer
             {
                 DataGridViewRow row = dataSP.SelectedRows[0];
                 txtMaSP.Text = row.Cells["MaSP"].Value.ToString();
-                cbMaDM.Text = row.Cells["MaDM"].Value.ToString();
+                cbDM.Text = _DMSanPhamBLL.GetTenDanhMucSanPhamByMa(row.Cells["MaDM"].Value.ToString());
                 txtTenSP.Text = row.Cells["TenSP"].Value.ToString();
                 txtGiaSP.Text = row.Cells["Gia"].Value.ToString();
                 SetButtonState(false, true, true, false, true);
