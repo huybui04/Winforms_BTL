@@ -56,8 +56,8 @@
             this.txtMaCa = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.btnSearchCaLamViec = new System.Windows.Forms.Button();
             this.cbSearchCaLamViec = new System.Windows.Forms.ComboBox();
+            this.btnSearchCaLamViec = new System.Windows.Forms.Button();
             this.panel22.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCaLamViec)).BeginInit();
@@ -408,6 +408,14 @@
             this.groupBox14.TabIndex = 2;
             this.groupBox14.TabStop = false;
             // 
+            // cbSearchCaLamViec
+            // 
+            this.cbSearchCaLamViec.FormattingEnabled = true;
+            this.cbSearchCaLamViec.Location = new System.Drawing.Point(17, 26);
+            this.cbSearchCaLamViec.Name = "cbSearchCaLamViec";
+            this.cbSearchCaLamViec.Size = new System.Drawing.Size(227, 21);
+            this.cbSearchCaLamViec.TabIndex = 2;
+            // 
             // btnSearchCaLamViec
             // 
             this.btnSearchCaLamViec.Image = global::QLQuanCF.Properties.Resources.search;
@@ -422,14 +430,6 @@
             this.btnSearchCaLamViec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearchCaLamViec.UseVisualStyleBackColor = true;
             this.btnSearchCaLamViec.Click += new System.EventHandler(this.btnSearchCaLamViec_Click);
-            // 
-            // cbSearchCaLamViec
-            // 
-            this.cbSearchCaLamViec.FormattingEnabled = true;
-            this.cbSearchCaLamViec.Location = new System.Drawing.Point(17, 26);
-            this.cbSearchCaLamViec.Name = "cbSearchCaLamViec";
-            this.cbSearchCaLamViec.Size = new System.Drawing.Size(227, 21);
-            this.cbSearchCaLamViec.TabIndex = 2;
             // 
             // fCaLamViec
             // 

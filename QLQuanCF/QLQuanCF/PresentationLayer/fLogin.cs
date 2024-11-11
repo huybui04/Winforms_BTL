@@ -16,9 +16,12 @@ namespace QLQuanCF
 		public fLogin()
 		{
 			InitializeComponent();
-		}
+            txtUsername.Text = "hvk";
+            txtPassword.Text = "123";
 
-		private void fLogin_Load(object sender, EventArgs e)
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
 		{
 			this.ActiveControl = labelInvisible;
 			labelInvisible.Visible = false;
@@ -63,7 +66,7 @@ namespace QLQuanCF
             }
             else
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -80,8 +83,8 @@ namespace QLQuanCF
 			if (string.IsNullOrWhiteSpace(txtPassword.Text))
 			{
 				txtPassword.Text = "Password";
-			}
-		}
+            }
+        }
 
 		private void txtUsername_Click(object sender, EventArgs e)
 		{

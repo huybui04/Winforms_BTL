@@ -29,10 +29,9 @@ namespace QLQuanCF
 
         private void LoadComboBoxData()
         {
-            cbMaCa.DataSource = _nhanVienBLL.GetCaLamViecList();
             cbChucVuNV.DataSource = new object[] { "Quản lý", "Nhân viên" };
             cbGioiTinhNV.DataSource = new object[] { "Nam", "Nữ" };
-            cbChucVuNV.SelectedIndex = cbGioiTinhNV.SelectedIndex = cbMaCa.SelectedIndex = -1;
+            cbChucVuNV.SelectedIndex = cbGioiTinhNV.SelectedIndex = -1;
 		}
 
         private void ShowDetail(bool detail)
@@ -40,7 +39,6 @@ namespace QLQuanCF
             txtTenNV.Enabled = detail;
             txtDiaChiNV.Enabled = detail;
             txtDienThoaiNV.Enabled = detail;
-            cbMaCa.Enabled = detail;
             cbChucVuNV.Enabled = detail;
             cbGioiTinhNV.Enabled = detail;
             dateNgaySinhNV.Enabled = detail;
@@ -64,12 +62,6 @@ namespace QLQuanCF
         {
             bool isValid = true;
             errorProvider.Clear();
-
-            if (string.IsNullOrWhiteSpace(cbMaCa.Text))
-            {
-                errorProvider.SetError(cbMaCa, "Mã ca không được để trống!");
-                isValid = false;
-            }
 
             if (string.IsNullOrWhiteSpace(txtTenNV.Text))
             {
@@ -113,7 +105,6 @@ namespace QLQuanCF
         {
             errorProvider.Clear();
             txtMaNV.Clear();
-            cbMaCa.SelectedIndex = -1;
             txtTenNV.Clear();
             cbChucVuNV.SelectedIndex = -1;
             cbGioiTinhNV.SelectedIndex = -1;
@@ -130,7 +121,6 @@ namespace QLQuanCF
             SetButtonState(false, false, false, true, true);
             ResetFlags();
             isAdding = true;
-            cbMaCa.Focus();
         }
 
         private void btnEditNV_Click(object sender, EventArgs e)
@@ -190,7 +180,6 @@ namespace QLQuanCF
             var nhanVien = new NhanVien
             {
                 MaNV = txtMaNV.Text,
-                MaCa = cbMaCa.Text,
                 TenNV = txtTenNV.Text,
                 ChucVu = cbChucVuNV.Text,
                 GioiTinh = cbGioiTinhNV.Text,
@@ -220,7 +209,6 @@ namespace QLQuanCF
             {
                 DataGridViewRow row = dataNhanVien.Rows[e.RowIndex];
                 txtMaNV.Text = row.Cells["MaNV"].Value.ToString();
-                cbMaCa.Text = row.Cells["MaCa"].Value.ToString();
                 txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
                 cbChucVuNV.Text = row.Cells["ChucVu"].Value.ToString();
                 cbGioiTinhNV.Text = row.Cells["GioiTinh"].Value.ToString();

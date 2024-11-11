@@ -10,6 +10,6 @@ namespace QLQuanCF.Models
     {
         public string MaNV { get; set; }
         public string MaCa { get; set; }
-        public DateTime? Ngay { get; set; }
+        public DateTime Ngay { get; set; }
     }
 }

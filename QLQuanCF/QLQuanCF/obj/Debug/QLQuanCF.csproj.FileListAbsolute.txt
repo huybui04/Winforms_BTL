@@ -167,3 +167,11 @@ D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Memory.x
 D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Numerics.Vectors.xml
 D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.Up2Date
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fLuong.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
+D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
+D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
+D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fBaoCaoDT.resources
+>>>>>>> 41de3f9a6d4bc7880c6afa4e3a04853d737bd747

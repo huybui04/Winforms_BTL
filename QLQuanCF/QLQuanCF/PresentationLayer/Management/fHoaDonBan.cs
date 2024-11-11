@@ -399,18 +399,6 @@ namespace QLQuanCF.PresentationLayer.Management
             }
         }
 
-        //TODO: trừ sl sp tương ứng với dòng đã xóa
-        private void UpdateSLSanPhamAfterDeletion(ChiTietHoaDonBan chiTietHoaDonBan)
-        {
-            // Cập nhật số lượng sản phẩm trong cơ sở dữ liệu
-            var sanPham = _sanPhamBLL.GetSanPhamByMaSanPham(chiTietHoaDonBan.MaSP);
-            //if (sanPham != null)
-            //{
-            //    sanPham.SLBan += chiTietHoaDonBan.SLBan;
-            //    _sanPhamBLL.UpdateSanPham(sanPham);
-            //}
-        }
-
         private void LoadChiTietHoaDonBan(string maHDB)
         {
             List<ChiTietHoaDonBan> chiTietHoaDonBans = _hoaDonBanBLL.GetChiTietHoaDonBanByMaHDB(maHDB);

@@ -12,126 +12,126 @@ using System.Windows.Forms;
 
 namespace QLQuanCF.PresentationLayer
 {
-	public partial class ShiftRegister : Form
-	{
-		private NhanVien _loggedInNhanVien;
-		private CaLamViecBLL caLamViecBLL;
-		private ChiTietLuongBLL chiTietLuongBLL;
-		private bool isValid = false;
+    public partial class ShiftRegister : Form
+    {
+        private NhanVien _loggedInNhanVien;
+        private CaLamViecBLL caLamViecBLL;
+        private ChiTietLuongBLL chiTietLuongBLL;
+        private bool isValid = false;
 
-		public ShiftRegister(NhanVien loggedInNhanVien)
-		{
-			InitializeComponent();
+        public ShiftRegister(NhanVien loggedInNhanVien)
+        {
+            InitializeComponent();
 
-			caLamViecBLL = new CaLamViecBLL(Classes.DbConfig.connectString);
-			chiTietLuongBLL = new ChiTietLuongBLL(Classes.DbConfig.connectString);
-			_loggedInNhanVien = loggedInNhanVien;
-			btnRegister.Enabled = isValid;
+            caLamViecBLL = new CaLamViecBLL(Classes.DbConfig.connectString);
+            chiTietLuongBLL = new ChiTietLuongBLL(Classes.DbConfig.connectString);
+            _loggedInNhanVien = loggedInNhanVien;
+            btnRegister.Enabled = isValid;
 
-		}
+        }
 
-		//btn exit
-		private void btnExit_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
+        //btn exit
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-		//Load data
-		private void ShiftRegister_Load(object sender, EventArgs e)
-		{
-			cbMaNV.Text = _loggedInNhanVien.MaNV;
-			txtTenNV.Text = _loggedInNhanVien.TenNV;
+        //Load data
+        private void ShiftRegister_Load(object sender, EventArgs e)
+        {
+            cbMaNV.Text = _loggedInNhanVien.MaNV;
+            txtTenNV.Text = _loggedInNhanVien.TenNV;
 
-			LoadCBCaLamViec();
-			SetDateTimePickerRange(dateNgayDK);
+            LoadCBCaLamViec();
+            SetDateTimePickerRange(dateNgayDK);
+            
+        }
 
-		}
+        private void LoadCBCaLamViec()
+        {
+            cbMaCa.DataSource = caLamViecBLL.GetAllCaLamViec();
+            cbMaCa.DisplayMember = "MaCa";
+            cbMaCa.ValueMember = "MaCa";
+            cbMaCa.SelectedIndex = -1;
+        }
 
-		private void LoadCBCaLamViec()
-		{
-			cbMaCa.DataSource = caLamViecBLL.GetAllCaLamViec();
-			cbMaCa.DisplayMember = "MaCa";
-			cbMaCa.ValueMember = "MaCa";
-			cbMaCa.SelectedIndex = -1;
-		}
+        private void LoadDataNgayDK()
+        {
+            dataNgayDK.DataSource = chiTietLuongBLL.GetChiTietLuongByDate(dateNgayDK.Value);
+        }
 
-		private void LoadDataNgayDK()
-		{
-			dataNgayDK.DataSource = chiTietLuongBLL.GetChiTietLuongByDate(dateNgayDK.Value);
-		}
+        //Hien thi ngay trong 1 tuan
+        private void SetDateTimePickerRange(DateTimePicker dtp)
+        {
+            DateTime today = DateTime.Today;
+            //DateTime today = new DateTime(2024, 11, 11);
 
-		//Hien thi ngay trong 1 tuan
-		private void SetDateTimePickerRange(DateTimePicker dtp)
-		{
-			DateTime today = DateTime.Today;
-			//DateTime today = new DateTime(2024, 11, 11);
+             //Tính ngày đầu tuần (Thứ Hai) và ngày cuối tuần (Chủ Nhật)
+            DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek + (int)DayOfWeek.Monday+7);
+            if (today.DayOfWeek == DayOfWeek.Sunday)
+            {
+                startOfWeek = startOfWeek.AddDays(-7);
+            }
+            DateTime endOfWeek = startOfWeek.AddDays(6);
+            
+            dtp.MinDate = startOfWeek;
+            dtp.MaxDate = endOfWeek;
+        }
 
-			//Tính ngày đầu tuần (Thứ Hai) và ngày cuối tuần (Chủ Nhật)
-			DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek + (int)DayOfWeek.Monday + 7);
-			if (today.DayOfWeek == DayOfWeek.Sunday)
-			{
-				startOfWeek = startOfWeek.AddDays(-7);
-			}
-			DateTime endOfWeek = startOfWeek.AddDays(6);
+        //cbMaCa
+        private void cbMaCa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbMaCa.SelectedIndex != -1)
+            {
+                isValid = true;
+                txtTenCa.Text = ((CaLamViec)cbMaCa.SelectedItem).TenCa;
+            }
+        }
 
-			dtp.MinDate = startOfWeek;
-			dtp.MaxDate = endOfWeek;
-		}
+        //Xu ly event chon ngay
+        private void dateNgayDK_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedDate = dateNgayDK.Value;
 
-		//cbMaCa
-		private void cbMaCa_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (cbMaCa.SelectedIndex != -1)
-			{
-				isValid = true;
-				txtTenCa.Text = ((CaLamViec)cbMaCa.SelectedItem).TenCa;
-			}
-		}
+            List<ChiTietLuong> chiTietLuongs = chiTietLuongBLL.GetChiTietLuongByDate(selectedDate);
+            dataNgayDK.DataSource = chiTietLuongs;
+        }
 
-		//Xu ly event chon ngay
-		private void dateNgayDK_ValueChanged(object sender, EventArgs e)
-		{
-			DateTime selectedDate = dateNgayDK.Value;
+        //btn Dang ky
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if(cbMaCa.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn ca làm việc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-			List<ChiTietLuong> chiTietLuongs = chiTietLuongBLL.GetChiTietLuongByDate(selectedDate);
-			dataNgayDK.DataSource = chiTietLuongs;
-		}
+            ChiTietLuong ct = new ChiTietLuong();
+            ct.MaNV = cbMaNV.Text;
+            ct.MaCa = cbMaCa.Text;
+            ct.Ngay = dateNgayDK.Value;
 
-		//btn Dang ky
-		private void btnRegister_Click(object sender, EventArgs e)
-		{
-			if (cbMaCa.Text == "")
-			{
-				MessageBox.Show("Vui lòng chọn ca làm việc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
+            if (chiTietLuongBLL.GetChiTietLuongByShiftAndDay(ct.MaCa, ct.Ngay).Count < 4 )
+            {
+                //kiem tra cac gtri da ton tai chua
+                foreach (DataGridViewRow row in dataNgayDK.Rows)
+                {
+                    if (row.Cells["MaNV"].Value.ToString() == ct.MaNV && row.Cells["MaCa"].Value.ToString() == ct.MaCa &&
+                        Convert.ToDateTime(row.Cells["Ngay"].Value) == ct.Ngay)
+                    {
+                        MessageBox.Show("Đã đăng ký ca làm việc này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
 
-			ChiTietLuong ct = new ChiTietLuong();
-			ct.MaNV = cbMaNV.Text;
-			ct.MaCa = cbMaCa.Text;
-			ct.Ngay = dateNgayDK.Value;
-
-			if (chiTietLuongBLL.GetChiTietLuongByShiftAndDay(ct.MaCa, (DateTime)ct.Ngay).Count < 4)
-			{
-				//kiem tra cac gtri da ton tai chua
-				foreach (DataGridViewRow row in dataNgayDK.Rows)
-				{
-					if (row.Cells["MaNV"].Value.ToString() == ct.MaNV && row.Cells["MaCa"].Value.ToString() == ct.MaCa &&
-						Convert.ToDateTime(row.Cells["Ngay"].Value) == ct.Ngay)
-					{
-						MessageBox.Show("Đã đăng ký ca làm việc này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-						return;
-					}
-				}
-
-				chiTietLuongBLL.AddChiTietLuong(ct);
-				MessageBox.Show($"Đăng ký {ct.MaCa} vào ngày {ct.Ngay} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				LoadDataNgayDK();
-			}
-			else
-			{
-				MessageBox.Show("Đăng ký thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
-	}
+                chiTietLuongBLL.AddChiTietLuong(ct);
+                MessageBox.Show($"Đăng ký {ct.MaCa} vào ngày {ct.Ngay} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataNgayDK();
+            }
+            else
+            {
+                MessageBox.Show("Đăng ký thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }
