@@ -54,5 +54,10 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             return _sanPhamDAL.GetSanPhamByMaSanPham(maSP);
         }
-    }
+
+		public List<SanPham> GetSanPhamByDanhMuc(string maDM)
+		{
+			return _sanPhamDAL.GetSanPhamByDanhMuc(maDM);
+		}
+	}
 }

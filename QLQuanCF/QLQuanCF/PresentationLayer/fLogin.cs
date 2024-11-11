@@ -4,14 +4,16 @@ using System.Drawing;
 using System.Windows.Forms;
 using QLQuanCF.DataAccessLayer;
 using QLQuanCF.Models;
+using QLQuanCF.BusinessLogicLayer;
 
 namespace QLQuanCF
 {
     public partial class fLogin : Form
     {
-        private UserDAL _userDAL = new UserDAL(Classes.DbConfig.connectString);
+        private UserBLL _userBLL = new UserBLL(Classes.DbConfig.connectString);
+		private NhanVienBLL _nhanVienBLL = new NhanVienBLL(Classes.DbConfig.connectString);
 
-        public fLogin()
+		public fLogin()
 		{
 			InitializeComponent();
 		}
@@ -47,13 +49,14 @@ namespace QLQuanCF
             }
 
             // Kiểm tra đăng nhập
-            bool isValid = _userDAL.CheckLogin(username, password);
+            bool isValid = _userBLL.CheckLogin(username, password);
             if (isValid)
             {
                 // Lấy thông tin người dùng và phân quyền
-                User user = _userDAL.GetUserByUsername(username);
-                // Mở form chính và phân quyền
-                fMain f = new fMain(user);
+                User user = _userBLL.GetUserByUsername(username);
+				NhanVien nhanVien = _nhanVienBLL.GetNhanVienByMaNV(user.MaNV);
+				// Mở form chính và phân quyền
+				fMain f = new fMain(user, nhanVien);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

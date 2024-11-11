@@ -126,5 +126,5 @@ namespace QLQuanCF.DataAccessLayer
             }
         }
 
-    }
+	}
 }

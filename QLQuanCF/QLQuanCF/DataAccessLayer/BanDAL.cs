@@ -170,5 +170,16 @@ namespace QLQuanCF.DataAccessLayer
 
             return null;
         }
+
+		public void UpdateTrangThaiBan(string maBan, string trangThai)
+		{
+			SqlParameter[] parameters =
+			{
+				new SqlParameter("@MaBan", maBan),
+				new SqlParameter("@TrangThai", trangThai)
+			};
+
+			_dbProcess.ExecuteNonQuery("UpdateTrangThaiBan", parameters);
+		}
 	}
 }
