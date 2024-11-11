@@ -37,16 +37,6 @@ namespace QLQuanCF
                 QLKVStripMenuItem.Visible = true;
                 QLBStripMenuItem.Visible = true;
             }
-            else if (_currentUser.Role == "Manager")
-            {
-                // Người quản lý chỉ có quyền truy cập một số menu
-                //QLNVStripMenuItem.Visible = true;
-                //QLKHStripMenuItem.Visible = true;
-                //QLNLStripMenuItem.Visible = true;
-                QLDMSPStripMenuItem.Visible = true;
-                QLKVStripMenuItem.Visible = true;
-                QLBStripMenuItem.Visible = true;
-            }
             else if (_currentUser.Role == "Staff")
             {
                 // Nhân viên chỉ có quyền truy cập một số menu hạn chế
@@ -225,12 +215,6 @@ namespace QLQuanCF
             }
         }
 
-        
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
         private void đăngKýLịchLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (_currentUser != null)
@@ -277,6 +261,21 @@ namespace QLQuanCF
             //{
             //    MessageBox.Show("Thông tin người dùng không hợp lệ.");
             //}
-        }   
+        }
+
+
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BaoCaoDTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fBaoCaoDT f = new fBaoCaoDT();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
