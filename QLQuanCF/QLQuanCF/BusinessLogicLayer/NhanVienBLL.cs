@@ -39,10 +39,6 @@ namespace QLQuanCF.BusinessLogicLayer
             return _nhanVienDAL.GetNhanVienByName(tenNV);
         }
 
-        public List<string> GetCaLamViecList()
-        {
-            return _nhanVienDAL.GetCaLamViecList();
-        }
         public NhanVien GetNhanVienByMaNV(string maNV)
         {
             return _nhanVienDAL.GetNhanVienByMaNV(maNV);

@@ -25,7 +25,6 @@ namespace QLQuanCF.DataAccessLayer
                 NhanVien nhanVien = new NhanVien
                 {
                     MaNV = row["MaNV"].ToString(),
-                    MaCa = row["MaCa"].ToString(),
                     TenNV = row["TenNV"].ToString(),
                     ChucVu = row["ChucVu"].ToString(),
                     GioiTinh = row["GioiTinh"].ToString(),
@@ -44,7 +43,6 @@ namespace QLQuanCF.DataAccessLayer
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaCa", nhanVien.MaCa),
                 new SqlParameter("@TenNV", nhanVien.TenNV),
                 new SqlParameter("@ChucVu", nhanVien.ChucVu),
                 new SqlParameter("@GioiTinh", nhanVien.GioiTinh),
@@ -60,8 +58,6 @@ namespace QLQuanCF.DataAccessLayer
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaNV", nhanVien.MaNV),
-                new SqlParameter("@MaCa", nhanVien.MaCa),
                 new SqlParameter("@TenNV", nhanVien.TenNV),
                 new SqlParameter("@ChucVu", nhanVien.ChucVu),
                 new SqlParameter("@GioiTinh", nhanVien.GioiTinh),
@@ -98,7 +94,6 @@ namespace QLQuanCF.DataAccessLayer
                 NhanVien nhanVien = new NhanVien
                 {
                     MaNV = row["MaNV"].ToString(),
-                    MaCa = row["MaCa"].ToString(),
                     TenNV = row["TenNV"].ToString(),
                     ChucVu = row["ChucVu"].ToString(),
                     GioiTinh = row["GioiTinh"].ToString(),
@@ -111,19 +106,6 @@ namespace QLQuanCF.DataAccessLayer
             }
 
             return nhanViens;
-        }
-
-        public List<string> GetCaLamViecList()
-        {
-            DataTable dataTable = _dbProcess.ExecuteQuery("GetCaLamViecList", null);
-            List<string> caLamViecs = new List<string>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                caLamViecs.Add(row["MaCa"].ToString());
-            }
-
-            return caLamViecs;
         }
 
         public NhanVien GetNhanVienByMaNV(string MaNV)
@@ -139,7 +121,6 @@ namespace QLQuanCF.DataAccessLayer
             foreach (DataRow row in dataTable.Rows)
             {
                 nhanVien.MaNV = row["MaNV"].ToString();
-                nhanVien.MaCa = row["MaCa"].ToString();
                 nhanVien.TenNV = row["TenNV"].ToString();
                 nhanVien.ChucVu = row["ChucVu"].ToString();
                 nhanVien.GioiTinh = row["GioiTinh"].ToString();

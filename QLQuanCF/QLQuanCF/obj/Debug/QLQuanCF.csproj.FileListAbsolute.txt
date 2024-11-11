@@ -116,3 +116,5 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
+D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
+D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
