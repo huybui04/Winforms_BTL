@@ -225,17 +225,58 @@ namespace QLQuanCF
             }
         }
 
-        private void QLCTHDBtripMenuItem_Click(object sender, EventArgs e)
-        {
-            fChiTietHoaDonBan f = new fChiTietHoaDonBan();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
+        
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-	}
+
+        private void đăngKýLịchLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_currentUser != null)
+            {
+                NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
+
+                if (loggedInNhanVien != null)
+                {
+                    ShiftRegister f = new ShiftRegister(loggedInNhanVien);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin nhân viên.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thông tin người dùng không hợp lệ.");
+            }
+        }
+
+        private void quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (_currentUser != null)
+            //{
+            //    NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
+
+            //    if (loggedInNhanVien != null)
+            //    {
+                    fLichLamViec f = new fLichLamViec();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Không tìm thấy thông tin nhân viên.");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Thông tin người dùng không hợp lệ.");
+            //}
+        }   
+    }
 }
