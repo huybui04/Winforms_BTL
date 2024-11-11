@@ -51,5 +51,25 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             return chiTietLuongDAL.GetAllChiTietLuong();
         }
+
+        public List<dynamic> GetLuongAndSoLuongMoiCa(DateTime selectedDate)
+        {
+            return chiTietLuongDAL.GetLuongAndSoLuongMoiCa(selectedDate);
+        }
+
+        public List<dynamic> ThongKeLuongThang(DateTime selectedDate)
+        {
+            return chiTietLuongDAL.ThongKeLuongThang(selectedDate);
+        }
+
+        public List<dynamic> GetChiTietThongKeLuong(string maNV, string maCa, DateTime selectedDate)
+        {
+            return chiTietLuongDAL.GetChiTietThongKeLuong(maNV, maCa, selectedDate);
+        }
+
+        public List<dynamic> GetLuongThangByMaNV(string maNV, DateTime selectedDate)
+        {
+            return chiTietLuongDAL.GetLuongThangByMaNV(maNV, selectedDate);
+        }
     }
 }

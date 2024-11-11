@@ -183,6 +183,12 @@
     <Compile Include="PresentationLayer\Management\fSanPham.Designer.cs">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Management\fThongKeLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fThongKeLuong.Designer.cs">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ShiftRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fSanPham.resx">
       <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fThongKeLuong.resx">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ShiftRegister.resx">
       <DependentUpon>ShiftRegister.cs</DependentUpon>

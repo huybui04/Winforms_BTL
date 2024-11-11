@@ -44,6 +44,7 @@ namespace QLQuanCF.PresentationLayer
 
             LoadCBCaLamViec();
             SetDateTimePickerRange(dateNgayDK);
+            txtTenCa.Text = "";
             
         }
 

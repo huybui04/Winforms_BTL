@@ -257,26 +257,18 @@ namespace QLQuanCF
 
         private void quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (_currentUser != null)
-            //{
-            //    NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
+            fLichLamViec f = new fLichLamViec();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
 
-            //    if (loggedInNhanVien != null)
-            //    {
-                    fLichLamViec f = new fLichLamViec();
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Không tìm thấy thông tin nhân viên.");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Thông tin người dùng không hợp lệ.");
-            //}
-        }   
+        private void thốngKêLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongKeLuong f = new fThongKeLuong();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -146,5 +146,112 @@ namespace QLQuanCF.DataAccessLayer
             }
             return chiTietLuongs;
         }
+
+        public List<dynamic> GetLuongAndSoLuongMoiCa(DateTime selectedDate)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@SelectedDate", selectedDate)
+            };
+
+            DataTable dataTable = dbProcess.ExecuteQuery("GetLuongAndSoLuongMoiCa", parameters);
+            List<dynamic> result = new List<dynamic>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                var record = new
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    SoLuongCa001 = Convert.ToInt32(row["SoLuongCa001"]),
+                    SoLuongCa002 = Convert.ToInt32(row["SoLuongCa002"]),
+                    SoLuongCa003 = Convert.ToInt32(row["SoLuongCa003"]),
+                    TongTien = Convert.ToDecimal(row["TongTien"])
+                };
+                result.Add(record);
+            }
+
+            return result;
+        }
+
+        public List<dynamic> ThongKeLuongThang(DateTime selectedDate)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SelectedDate", selectedDate)
+            };
+
+            DataTable dt = dbProcess.ExecuteQuery("ThongKeLuongThang", parameters);
+            List<dynamic> result = new List<dynamic>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                var record = new
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    TenNV = row["TenNV"].ToString(),
+                    ChucVu = row["ChucVu"].ToString(),
+                    Thang = row["NgayPhat"].ToString(),
+                    TongLuong = Convert.ToDecimal(row["TongLuong"])
+                };
+                result.Add(record);
+            }
+
+            return result;
+        }
+
+        public List <dynamic> GetChiTietThongKeLuong(string maNV, string maCa, DateTime selectedDate)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaNV", maNV),
+                new SqlParameter("@MaCa", maCa),
+                new SqlParameter("@SelectedDate", selectedDate)
+            };
+
+            DataTable dataTable = dbProcess.ExecuteQuery("GetChiTietThongKeLuong", parameters);
+            List<dynamic> result = new List<dynamic>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                var record = new
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    TenNV = row["TenNV"].ToString(),
+                    ChucVu = row["ChucVu"].ToString(),
+                    MaCa = row["MaCa"].ToString(),
+                    Ngay = Convert.ToDateTime(row["Ngay"])
+                };
+                result.Add(record);
+            }
+
+            return result;
+        }
+
+        public List<dynamic> GetLuongThangByMaNV(string maNV, DateTime selectedDate)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaNV", maNV),
+                new SqlParameter("@SelectedDate", selectedDate)
+            };
+
+            DataTable dt = dbProcess.ExecuteQuery("GetLuongThangByMaNV", parameters);
+            List<dynamic> result = new List<dynamic>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                var record = new
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    TenNV = row["TenNV"].ToString(),
+                    ChucVu = row["ChucVu"].ToString(),
+                    Thang = row["NgayPhat"].ToString(),
+                    TongLuong = Convert.ToDecimal(row["TongLuong"])
+                };
+                result.Add(record);
+            }
+
+            return result;
+        }
     }
 }

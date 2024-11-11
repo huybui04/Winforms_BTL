@@ -403,6 +403,7 @@
             this.dataChiTietHoaDonBan.RowTemplate.Height = 24;
             this.dataChiTietHoaDonBan.Size = new System.Drawing.Size(664, 338);
             this.dataChiTietHoaDonBan.TabIndex = 1;
+            this.dataChiTietHoaDonBan.Visible = false;
             this.dataChiTietHoaDonBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataHDB_CellClick);
             this.dataChiTietHoaDonBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChiTietHoaDonBan_CellDoubleClick);
             // 

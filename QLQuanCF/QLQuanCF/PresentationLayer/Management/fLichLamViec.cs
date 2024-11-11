@@ -41,9 +41,10 @@ namespace QLQuanCF.PresentationLayer.Management
             txtTenCa.Enabled = false;
             txtTenNV.Enabled = false;
             
-            ClearInputFields();
             LoadCaLamViec();
             LoadNhanVien();
+            LoadData();
+            ClearInputFields();
         }
 
         private void LoadCaLamViec()
@@ -176,7 +177,6 @@ namespace QLQuanCF.PresentationLayer.Management
         //tim lich lam viec theo ma nhan vien 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cbSearch.Text);
             if (string.IsNullOrWhiteSpace(cbSearch.Text))
             {
                 MessageBox.Show($"Không tìm thấy lịch làm việc nào cho nhân viên có mã {cbMaNV.Text}!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

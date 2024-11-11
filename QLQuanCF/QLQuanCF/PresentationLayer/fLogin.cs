@@ -14,9 +14,6 @@ namespace QLQuanCF
         public fLogin()
 		{
 			InitializeComponent();
-            txtUsername.Text = "hvk";
-            txtPassword.Text = "123";
-
         }
 
         private void fLogin_Load(object sender, EventArgs e)

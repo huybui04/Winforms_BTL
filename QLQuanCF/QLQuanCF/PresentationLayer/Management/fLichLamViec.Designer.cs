@@ -43,12 +43,6 @@
             this.panel36 = new System.Windows.Forms.Panel();
             this.cbMaNV = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.dataLichLamViec = new System.Windows.Forms.DataGridView();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTenCa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,18 +52,24 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.lblNgayBan = new System.Windows.Forms.Label();
             this.dateNgayDK = new System.Windows.Forms.DateTimePicker();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dataLichLamViec = new System.Windows.Forms.DataGridView();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.panel36.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel35.SuspendLayout();
             this.panel22.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLichLamViec)).BeginInit();
             this.panel15.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel35.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTenNV
@@ -263,87 +263,6 @@
             this.groupBox13.TabIndex = 1;
             this.groupBox13.TabStop = false;
             // 
-            // btnSave
-            // 
-            this.btnSave.Image = global::QLQuanCF.Properties.Resources.save;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(62, 253);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnSave.Size = new System.Drawing.Size(82, 40);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSaveHDB_Click);
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.groupBox15);
-            this.panel22.Controls.Add(this.groupBox16);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(522, 407);
-            this.panel22.TabIndex = 7;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.dataLichLamViec);
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox15.Location = new System.Drawing.Point(0, 63);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Size = new System.Drawing.Size(522, 344);
-            this.groupBox15.TabIndex = 3;
-            this.groupBox15.TabStop = false;
-            // 
-            // dataLichLamViec
-            // 
-            this.dataLichLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataLichLamViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLichLamViec.Location = new System.Drawing.Point(2, 15);
-            this.dataLichLamViec.Margin = new System.Windows.Forms.Padding(2);
-            this.dataLichLamViec.Name = "dataLichLamViec";
-            this.dataLichLamViec.ReadOnly = true;
-            this.dataLichLamViec.RowHeadersWidth = 51;
-            this.dataLichLamViec.RowTemplate.Height = 24;
-            this.dataLichLamViec.Size = new System.Drawing.Size(518, 327);
-            this.dataLichLamViec.TabIndex = 0;
-            this.dataLichLamViec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLichLamViec_CellClick);
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.groupBox13);
-            this.panel15.Controls.Add(this.groupBox14);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(522, 0);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(337, 407);
-            this.panel15.TabIndex = 6;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancel.Image = global::QLQuanCF.Properties.Resources.cancel;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(207, 253);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnCancel.Size = new System.Drawing.Size(82, 40);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtTenCa);
@@ -432,6 +351,87 @@
             this.dateNgayDK.TabIndex = 1;
             this.dateNgayDK.ValueChanged += new System.EventHandler(this.dateNgayDK_ValueChanged);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancel.Image = global::QLQuanCF.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(207, 253);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnCancel.Size = new System.Drawing.Size(82, 40);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::QLQuanCF.Properties.Resources.save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(62, 253);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnSave.Size = new System.Drawing.Size(82, 40);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveHDB_Click);
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.groupBox15);
+            this.panel22.Controls.Add(this.groupBox16);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(0, 0);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(522, 407);
+            this.panel22.TabIndex = 7;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.dataLichLamViec);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox15.Location = new System.Drawing.Point(0, 63);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Size = new System.Drawing.Size(522, 344);
+            this.groupBox15.TabIndex = 3;
+            this.groupBox15.TabStop = false;
+            // 
+            // dataLichLamViec
+            // 
+            this.dataLichLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataLichLamViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLichLamViec.Location = new System.Drawing.Point(2, 15);
+            this.dataLichLamViec.Margin = new System.Windows.Forms.Padding(2);
+            this.dataLichLamViec.Name = "dataLichLamViec";
+            this.dataLichLamViec.ReadOnly = true;
+            this.dataLichLamViec.RowHeadersWidth = 51;
+            this.dataLichLamViec.RowTemplate.Height = 24;
+            this.dataLichLamViec.Size = new System.Drawing.Size(518, 327);
+            this.dataLichLamViec.TabIndex = 0;
+            this.dataLichLamViec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLichLamViec_CellClick);
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.groupBox13);
+            this.panel15.Controls.Add(this.groupBox14);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(522, 0);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(337, 407);
+            this.panel15.TabIndex = 6;
+            // 
             // fLichLamViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,7 +440,8 @@
             this.Controls.Add(this.panel22);
             this.Controls.Add(this.panel15);
             this.Name = "fLichLamViec";
-            this.Text = "fLichLamViec";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý lịch làm việc";
             this.Load += new System.EventHandler(this.fLichLamViec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -449,16 +450,16 @@
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
             this.groupBox13.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataLichLamViec)).EndInit();
-            this.panel15.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLichLamViec)).EndInit();
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

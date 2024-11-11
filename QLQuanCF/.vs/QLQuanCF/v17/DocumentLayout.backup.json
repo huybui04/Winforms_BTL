@@ -3,52 +3,36 @@
   "WorkspaceRootPath": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\management\\fthongkeluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fthongkeluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fhoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fhoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fcalamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fcalamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fcalamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fcalamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\dataaccesslayer\\chitietluongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\dataaccesslayer\\chitietluongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\dataaccesslayer\\calamviecdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\dataaccesslayer\\calamviecdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\businesslogiclayer\\chitietluongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\businesslogiclayer\\chitietluongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\management\\fthongkeluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fthongkeluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\management\\fhoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fhoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\businesslogiclayer\\chitietluongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\businesslogiclayer\\chitietluongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\management\\fthongkeluong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\fthongkeluong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,6 +41,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|f:\\workspace\\visual_studio_src\\winforms_btl\\qlquancf\\qlquancf\\dataaccesslayer\\chitietluongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\dataaccesslayer\\chitietluongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,59 +70,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fLichLamViec.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAmwKkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:48:13.94Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fLichLamViec.cs [Design]",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs [Design]",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:38:11.956Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "fCaLamViec.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAIwLwAAAAjAAAAAAAAAA==",
+              "Title": "fThongKeLuong.cs [Design]",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:35:31.726Z",
+              "WhenOpened": "2024-11-11T11:23:54.173Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fThongKeLuong.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAAL4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T14:03:00.405Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "fCaLamViec.cs [Design]",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs [Design]",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fCaLamViec.cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "ChiTietLuongDAL.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
+              "RelativeToolTip": "QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAcwP4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:35:28.528Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T14:30:34.319Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChiTietLuongBLL.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
+              "RelativeToolTip": "QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA4wEcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T14:30:44.217Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -126,84 +133,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CaLamViecDAL.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\CaLamViecDAL.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\DataAccessLayer\\CaLamViecDAL.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\CaLamViecDAL.cs",
-              "RelativeToolTip": "QLQuanCF\\DataAccessLayer\\CaLamViecDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:24:18.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ChiTietLuongBLL.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
-              "RelativeToolTip": "QLQuanCF\\BusinessLogicLayer\\ChiTietLuongBLL.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwDQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:12:13.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChiTietLuongDAL.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
-              "RelativeToolTip": "QLQuanCF\\DataAccessLayer\\ChiTietLuongDAL.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAADwv28AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:09:30.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "fNhanVien.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAqwOYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:48:45.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "fNhanVien.cs [Design]",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs [Design]",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fNhanVien.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:48:38.354Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ShiftRegister.cs",
-              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAEwFYAAAAwAAAAAAAAAA==",
+              "Title": "fLogin.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwEoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:27:59.971Z",
+              "WhenOpened": "2024-11-11T20:09:04.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fLogin.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fLogin.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T20:09:00.214Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fThongKeLuong.Designer.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.Designer.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.Designer.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.Designer.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fThongKeLuong.Designer.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAWwKcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T15:58:16.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShiftRegister.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwCcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T14:18:31.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fHoaDonBan.cs [Design]",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T13:45:23.566Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fLichLamViec.cs [Design]",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs [Design]",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T14:38:11.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "fLichLamViec.cs",
+              "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAqwLIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T14:48:13.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ShiftRegister.cs [Design]",
               "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
@@ -215,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "fMain.cs [Design]",
               "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
@@ -227,26 +245,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "fMain.cs",
               "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
               "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAIwAkBAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAiwA4BAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T10:23:19.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "fHoaDonBan.cs",
               "DocumentMoniker": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
               "ToolTip": "F:\\workspace\\visual_studio_src\\Winforms_BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
               "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fHoaDonBan.cs",
-              "ViewState": "AgIAALQBAAAAAAAAAAAvwMYBAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAowNAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T10:19:29.387Z",
               "EditorCaption": ""

@@ -41,7 +41,9 @@
             this.quảnLýSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýCaLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýHóaĐơnBánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKýLịchLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,8 +77,6 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.gbBan = new System.Windows.Forms.GroupBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.thốngKêLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -191,6 +191,13 @@
             this.quảnLýHóaĐơnBánToolStripMenuItem.Text = "Quản lý hóa đơn bán";
             this.quảnLýHóaĐơnBánToolStripMenuItem.Click += new System.EventHandler(this.QLHDBtripMenuItem_Click);
             // 
+            // quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem
+            // 
+            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Name = "quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem";
+            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Text = "Quản lý lịch làm việc của nhân viên";
+            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click);
+            // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -198,6 +205,13 @@
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // thốngKêLươngToolStripMenuItem
+            // 
+            this.thốngKêLươngToolStripMenuItem.Name = "thốngKêLươngToolStripMenuItem";
+            this.thốngKêLươngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKêLươngToolStripMenuItem.Text = "Thống kê lương";
+            this.thốngKêLươngToolStripMenuItem.Click += new System.EventHandler(this.thốngKêLươngToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -537,19 +551,6 @@
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(528, 516);
             this.flpTable.TabIndex = 0;
-            // 
-            // thốngKêLươngToolStripMenuItem
-            // 
-            this.thốngKêLươngToolStripMenuItem.Name = "thốngKêLươngToolStripMenuItem";
-            this.thốngKêLươngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thốngKêLươngToolStripMenuItem.Text = "Thống kê lương";
-            // 
-            // quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem
-            // 
-            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Name = "quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem";
-            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Text = "Quản lý lịch làm việc của nhân viên";
-            this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click);
             // 
             // fMain
             // 
