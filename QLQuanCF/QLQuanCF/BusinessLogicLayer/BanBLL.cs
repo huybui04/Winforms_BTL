@@ -57,5 +57,9 @@ namespace QLQuanCF.BusinessLogicLayer
             return _banDAL.GetBanByMaBan(maBan);
         }
 
-    }
+		public void UpdateTrangThaiBan(string maBan, string trangThai)
+		{
+			_banDAL.UpdateTrangThaiBan(maBan, trangThai);
+		}
+	}
 }

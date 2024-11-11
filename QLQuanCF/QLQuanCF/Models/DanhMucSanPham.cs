@@ -5,5 +5,5 @@ namespace QLQuanCF.Models
     {
         public string MaDM { get; set; }
         public string TenDM { get; set; }
-    }
+	}
 }

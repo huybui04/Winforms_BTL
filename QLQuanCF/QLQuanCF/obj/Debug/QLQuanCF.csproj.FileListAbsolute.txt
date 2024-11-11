@@ -112,6 +112,61 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fCaLamViec.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fChiTietHoaDonBan.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fHoaDonBan.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fCaLamViec.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fChiTietHoaDonBan.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fHoaDonBan.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fLuong.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhapKH.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fChiTietHDB.resources
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.Interfaces.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.System.Drawing.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Buffers.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Memory.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Numerics.Vectors.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Buffers.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Memory.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Numerics.Vectors.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Program Files (x86)\C#\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.Up2Date
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fChiTietHDB.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhapKH.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fBan.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fBaoCaoDT.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fCaLamViec.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fDMSanPham.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fHoaDonBan.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhachHang.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fKhuVuc.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fLuong.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.fNhanVien.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNguyenLieu.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhaCungCap.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.Interfaces.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.System.Drawing.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Buffers.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Memory.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Numerics.Vectors.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Buffers.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Memory.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Numerics.Vectors.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Program Files (x86)\C#\source\BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.Up2Date
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fLuong.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
@@ -119,3 +174,4 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fBaoCaoDT.resources
+>>>>>>> 41de3f9a6d4bc7880c6afa4e3a04853d737bd747

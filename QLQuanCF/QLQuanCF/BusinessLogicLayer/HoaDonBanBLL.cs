@@ -2,6 +2,7 @@
 using QLQuanCF.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,5 +52,20 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             hoaDonBanDAL.UpdateChiTietHoaDonBan(hoaDonBan);
         }
-    }
+
+        public string GetLastMaHDB()
+		{
+			return hoaDonBanDAL.GetLastMaHDB();
+		}
+
+		/*public HoaDonBan GetHoaDonInfoByMaBan(string maBan)
+		{
+			return hoaDonBanDAL.GetHoaDonInfoByMaBan(maBan);
+		}
+
+        public HoaDonBan showBill(string maBan)
+		{
+			return hoaDonBanDAL.ShowBill(maBan);
+		}*/
+	}
 }

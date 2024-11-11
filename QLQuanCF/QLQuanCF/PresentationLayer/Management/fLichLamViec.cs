@@ -207,7 +207,7 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbMaNV.SelectedIndex != -1)
+			if (cbMaNV.SelectedIndex != -1)
             {
                 //ep kieu ve nv do ban dau load obj nv vao cbMaNV
                 txtTenNV.Text = ((NhanVien)cbMaNV.SelectedItem).TenNV;
@@ -216,7 +216,7 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void cbMaCa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbMaCa.SelectedIndex != -1)
+			if (cbMaCa.SelectedIndex != -1)
             {
                 txtTenCa.Text = ((CaLamViec)cbMaCa.SelectedItem).TenCa;
             }
