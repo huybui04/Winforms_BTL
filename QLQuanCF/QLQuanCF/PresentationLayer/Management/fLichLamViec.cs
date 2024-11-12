@@ -41,10 +41,10 @@ namespace QLQuanCF.PresentationLayer.Management
             txtTenCa.Enabled = false;
             txtTenNV.Enabled = false;
             
-            ClearInputFields();
             LoadCaLamViec();
             LoadNhanVien();
-            LoadData(); 
+            LoadData();
+            ClearInputFields();
         }
 
         private void LoadCaLamViec()

@@ -36,6 +36,9 @@ namespace QLQuanCF.PresentationLayer.Management
             LoadData();
             ShowDetail(false);
             SetButtonState(true, false, false, false, false);
+            dataHDB.Dock = DockStyle.Fill;
+            txtTenNV.Text = _loggedInNhanVien.TenNV;
+            cbMaNV.Text = _loggedInNhanVien.MaNV;
         }
 
         private void LoadData()
@@ -49,8 +52,6 @@ namespace QLQuanCF.PresentationLayer.Management
         private void LoadHDBData()
         {
             dataHDB.DataSource = _hoaDonBanBLL.GetAllHDB();
-            txtTenNV.Text = _loggedInNhanVien.TenNV;
-            cbMaNV.Text = _loggedInNhanVien.MaNV;
 
             cbSearchHDB.DataSource = _hoaDonBanBLL.GetAllHDB();
             cbSearchHDB.DisplayMember = "MaHDB";
@@ -187,6 +188,8 @@ namespace QLQuanCF.PresentationLayer.Management
         private void btnAddHDB_Click(object sender, EventArgs e)
         {
             ClearInputFields();
+            dataHDB.Dock = DockStyle.Top;
+            dataChiTietHoaDonBan.Visible = true;
 
             ShowDetail(true);
             SetButtonState(false, false, false, true, true);
@@ -205,6 +208,7 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void btnDeleteHDB_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn bán hàng này không?", "Xóa hóa đơn", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ResetFlags();
@@ -296,6 +300,8 @@ namespace QLQuanCF.PresentationLayer.Management
         {
             ClearInputFields();
             ClearDataChiTietHoaDonBan();
+            dataChiTietHoaDonBan.Visible = false;
+            dataHDB.Dock = DockStyle.Fill;
 
             LoadHDBData();
             SetButtonState(true, false, false, false, false);
@@ -304,6 +310,8 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void btnSearchHDB_Click(object sender, EventArgs e)
         {
+            dataHDB.Dock = DockStyle.Fill;
+            dataChiTietHoaDonBan.Visible = false;
             if (string.IsNullOrWhiteSpace(cbSearchHDB.Text))
             {
                 LoadData(); return;
@@ -335,6 +343,8 @@ namespace QLQuanCF.PresentationLayer.Management
 
             errorProvider.Clear();
             ShowDetail(false);
+            dataChiTietHoaDonBan.Visible = true;
+            dataHDB.Dock = DockStyle.Top;
 
             if (dataGridView.Name == "dataHDB")
             {
@@ -383,20 +393,48 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void dataChiTietHoaDonBan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn bán hàng này không?", "Xóa hóa đơn", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    //dataChiTietHoaDonBan.Rows.RemoveAt(e.RowIndex);
-                    //UpdateTriGia();
-                    var dataSource = (List<ChiTietHoaDonBan>)dataChiTietHoaDonBan.DataSource;
-                    dataSource.RemoveAt(e.RowIndex);
-                    dataChiTietHoaDonBan.DataSource = null;
-                    dataChiTietHoaDonBan.DataSource = dataSource;
-                    UpdateTriGia();
+                    try
+                    {
+                        DataGridViewRow row = dataChiTietHoaDonBan.Rows[e.RowIndex];
+                        string maHDB = txtMaHDB.Text;
+                        string maSP = row.Cells["MaSP"].Value.ToString();
+                        
+                        _hoaDonBanBLL.DeleteChiTietHoaDonBan(maHDB, maSP);
+                        var dataSource = (List<ChiTietHoaDonBan>)dataChiTietHoaDonBan.DataSource;
+                        dataSource.RemoveAt(e.RowIndex);
+                        dataChiTietHoaDonBan.DataSource = null;
+                        dataChiTietHoaDonBan.DataSource = dataSource;
+                        
+                        UpdateTriGia();
+                        SaveUpdatedTriGia();
+
+                        dataHDB.DataSource = null;
+                        LoadHDBData();
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        Console.WriteLine($"Xảy ra lỗi: {ex.Message}");
+                    }
                 }
-                
             }
+        }
+
+        private void SaveUpdatedTriGia()
+        {
+            string maHDB = txtMaHDB.Text;
+            decimal triGia = Convert.ToDecimal(txtTriGia.Text);
+
+            HoaDonBan hoaDonBan = new HoaDonBan
+            {
+                MaHDB = maHDB,
+                TriGia = triGia
+            };
+
+            _hoaDonBanBLL.UpdateTriGiaHDB(hoaDonBan);
         }
 
         private void LoadChiTietHoaDonBan(string maHDB)
@@ -496,11 +534,7 @@ namespace QLQuanCF.PresentationLayer.Management
                 {
                     txtThanhTien.Text = "0.00";
                 }
-
-                //if (!isEditing)
-                //{
-                    AddChiTietHoaDonBanToDataHDB();
-                //}
+                AddChiTietHoaDonBanToDataHDB();
             }
         }
         private void AddChiTietHoaDonBanToDataHDB()

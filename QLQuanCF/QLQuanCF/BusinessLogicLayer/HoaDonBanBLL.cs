@@ -58,14 +58,15 @@ namespace QLQuanCF.BusinessLogicLayer
 			return hoaDonBanDAL.GetLastMaHDB();
 		}
 
-		/*public HoaDonBan GetHoaDonInfoByMaBan(string maBan)
-		{
-			return hoaDonBanDAL.GetHoaDonInfoByMaBan(maBan);
-		}
+        public void UpdateTriGiaHDB(HoaDonBan hoaDonBan)
+        {
+            hoaDonBanDAL.UpdateTriGiaHDB(hoaDonBan);
+        }
 
-        public HoaDonBan showBill(string maBan)
-		{
-			return hoaDonBanDAL.ShowBill(maBan);
-		}*/
-	}
+        public void DeleteChiTietHoaDonBan(string maHDB, string maSP)
+        {
+            hoaDonBanDAL.DeleteChiTietHoaDonBan(maHDB, maSP);
+        }
+
+    }
 }

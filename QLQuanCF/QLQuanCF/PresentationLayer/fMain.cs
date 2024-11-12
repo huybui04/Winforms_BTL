@@ -495,7 +495,15 @@ namespace QLQuanCF
 			this.Show();
 		}
 
-		private void btnChinhSua_Click(object sender, EventArgs e)
+        private void thốngKêLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongKeLuong f = new fThongKeLuong();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
 		{
 			if (lsvCTHD.SelectedItems.Count > 0)
 			{
@@ -702,5 +710,21 @@ namespace QLQuanCF
 			fChiTietHDB fChiTietHDB = new fChiTietHDB(tenBan, ngayBan, tenNhanVien, tenKhachHang, soDienThoai, giamGia, tongTien, listViewItemsClone);
 			fChiTietHDB.ShowDialog();
 		}
+
+        private void quảnLýChiTiếtSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChiTietSanPham f = new fChiTietSanPham();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void quảnLýHóaĐơnNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fHoaDonNhap f = new fHoaDonNhap();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

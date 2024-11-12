@@ -26,7 +26,7 @@ namespace QLQuanCF.PresentationLayer
             caLamViecBLL = new CaLamViecBLL(Classes.DbConfig.connectString);
             chiTietLuongBLL = new ChiTietLuongBLL(Classes.DbConfig.connectString);
             _loggedInNhanVien = loggedInNhanVien;
-            btnRegister.Enabled = isValid;
+            btnRegister.Enabled = true;
 
         }
 
@@ -44,6 +44,7 @@ namespace QLQuanCF.PresentationLayer
 
             LoadCBCaLamViec();
             SetDateTimePickerRange(dateNgayDK);
+            txtTenCa.Text = "";
             
         }
 
