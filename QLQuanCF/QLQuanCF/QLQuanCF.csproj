@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2568739B-536B-4F11-82DE-E852B532B155}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLQuanCF</RootNamespace>
+    <AssemblyName>QLQuanCF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=7.4.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.4.2\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BaoCaoBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietLuongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietSanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\OrderDetailsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\UserBLL.cs" />
+    <Compile Include="Classes\DbConfig.cs" />
+    <Compile Include="DataAccessLayer\BaoCaoDAL.cs" />
+    <Compile Include="DataAccessLayer\ChiTietLuongDAL.cs" />
+    <Compile Include="DataAccessLayer\ChiTietSanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\HoaDonNhapDAL.cs" />
+    <Compile Include="DataAccessLayer\LuongDAL.cs" />
+    <Compile Include="BusinessLogicLayer\BanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DMSanPhamBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhuVucBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
+    <Compile Include="DataAccessLayer\BanDAL.cs" />
+    <Compile Include="DataAccessLayer\CaLamViecDAL.cs" />
+    <Compile Include="DataAccessLayer\DMSanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\HoaDonBanDAL.cs" />
+    <Compile Include="DataAccessLayer\KhachHangDAL.cs" />
+    <Compile Include="DataAccessLayer\KhuVucDAL.cs" />
+    <Compile Include="DataAccessLayer\NguyenLieuDAL.cs" />
+    <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
+    <Compile Include="DataAccessLayer\DbProcess.cs" />
+    <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
+    <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="DataAccessLayer\OrderDetailsDAL.cs" />
+    <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
+    <Compile Include="DataAccessLayer\UserDAL.cs" />
+    <Compile Include="Models\ChiTietSanPham.cs" />
+    <Compile Include="Models\Luong.cs" />
+    <Compile Include="Models\Ban.cs" />
+    <Compile Include="Models\CaLamViec.cs" />
+    <Compile Include="Models\ChiTietHoaDonBan.cs" />
+    <Compile Include="Models\ChiTietHoaDonNhap.cs" />
+    <Compile Include="Models\ChiTietLuong.cs" />
+    <Compile Include="Models\DanhMucSanPham.cs" />
+    <Compile Include="Models\HoaDonBan.cs" />
+    <Compile Include="Models\HoaDonNhap.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\KhuVuc.cs" />
+    <Compile Include="Models\NguyenLieu.cs" />
+    <Compile Include="Models\NhaCungCap.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="PresentationLayer\fChiTietHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fChiTietHDB.Designer.cs">
+      <DependentUpon>fChiTietHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fNhapKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fNhapKH.Designer.cs">
+      <DependentUpon>fNhapKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fBan.Designer.cs">
+      <DependentUpon>fBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fBaoCaoDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fBaoCaoDT.Designer.cs">
+      <DependentUpon>fBaoCaoDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fCaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fCaLamViec.Designer.cs">
+      <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietSanPham.Designer.cs">
+      <DependentUpon>fChiTietSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fDMSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fDMSanPham.Designer.cs">
+      <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonBan.Designer.cs">
+      <DependentUpon>fHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonNhap.Designer.cs">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fKhuVuc.Designer.cs">
+      <DependentUpon>fKhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLichLamViec.Designer.cs">
+      <DependentUpon>fLichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fLuong.Designer.cs">
+      <DependentUpon>fLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\fMenuSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\fMenuSelection.Designer.cs">
+      <DependentUpon>fMenuSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNguyenLieu.Designer.cs">
+      <DependentUpon>fNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fNhaCungCap.Designer.cs">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fUser.Designer.cs">
+      <DependentUpon>fUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fThongKeLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fThongKeLuong.Designer.cs">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ShiftRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ShiftRegister.Designer.cs">
+      <DependentUpon>ShiftRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\fChiTietHDB.resx">
+      <DependentUpon>fChiTietHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fNhapKH.resx">
+      <DependentUpon>fNhapKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fBan.resx">
+      <DependentUpon>fBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fBaoCaoDT.resx">
+      <DependentUpon>fBaoCaoDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fCaLamViec.resx">
+      <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fChiTietSanPham.resx">
+      <DependentUpon>fChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fDMSanPham.resx">
+      <DependentUpon>fDMSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fHoaDonBan.resx">
+      <DependentUpon>fHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fHoaDonNhap.resx">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fKhuVuc.resx">
+      <DependentUpon>fKhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fLichLamViec.resx">
+      <DependentUpon>fLichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fLuong.resx">
+      <DependentUpon>fLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\fMenuSelection.resx">
+      <DependentUpon>fMenuSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fNguyenLieu.resx">
+      <DependentUpon>fNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fNhaCungCap.resx">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fThongKeLuong.resx">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fUser.resx">
+      <DependentUpon>fUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ShiftRegister.resx">
+      <DependentUpon>ShiftRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Public\password.png" />
+    <None Include="Public\user.png" />
+    <None Include="Public\search.png" />
+    <None Include="Public\save.png" />
+    <None Include="Public\cancel.png" />
+    <None Include="Public\add.png" />
+    <None Include="Public\delete.png" />
+    <None Include="Public\edit.png" />
+    <None Include="Public\exit.png" />
+    <None Include="Public\login.gif" />
+    <Content Include="Public\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
