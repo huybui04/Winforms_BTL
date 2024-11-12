@@ -163,5 +163,81 @@ namespace QLQuanCF.DataAccessLayer
                 dbProcess.ExecuteNonQuery("UpdateChiTietHoaDonBan", chiTietParameters);
             }
         }
+
+        public string GetLastMaHDB()
+		{
+			return dbProcess.ExecuteScalar("GetLastMaHDB", null).ToString();
+		}
+
+        /*public HoaDonBan GetHoaDonInfoByMaBan(string maBan)
+		{
+
+			SqlParameter[] parameters = new SqlParameter[]
+			{
+		        new SqlParameter("@MaBan", SqlDbType.NVarChar) { Value = maBan }
+			};
+
+			DataTable dt = dbProcess.ExecuteQuery("GetHoaDonInfoByMaBan", parameters);
+
+			// Kiểm tra nếu có dữ liệu trả về
+			if (dt.Rows.Count > 0)
+			{
+				// Lấy dữ liệu từ DataTable và chuyển đổi thành đối tượng HoaDonBan
+				DataRow row = dt.Rows[0]; // Giả sử chỉ có một kết quả
+				HoaDonBan hoaDonBan = new HoaDonBan
+				{
+					MaHDB = row["MaHDB"].ToString(),
+					NgayBan = row["NgayVao"] != DBNull.Value ? (DateTime?)row["NgayVao"] : null,
+					MaNV = row["TenNhanVien"].ToString(),
+					MaKH = row["TenKhachHang"].ToString(),
+					TriGia = row["TongTien"] != DBNull.Value ? (decimal?)row["TongTien"] : null
+				};
+			}
+
+			return null;
+		}*/
+
+        /*public HoaDonBan ShowBill(string maBan)
+		{
+			// Lấy thông tin hóa đơn từ mã bàn
+			HoaDonBan hoaDonBan = GetHoaDonInfoByMaBan(maBan);
+
+			if (hoaDonBan == null)
+			{
+				// Nếu không có hóa đơn, trả về null hoặc thông báo lỗi
+				return null;
+			}
+
+			// Lấy chi tiết hóa đơn bán từ mã hóa đơn
+			List<ChiTietHoaDonBan> chiTietHoaDonBans = GetChiTietHoaDonBanByMaHDB(hoaDonBan.MaHDB);
+
+			// Gắn chi tiết hóa đơn vào thông tin hóa đơn
+			hoaDonBan.ChiTietHoaDonBans = chiTietHoaDonBans;
+
+			// Trả về hóa đơn đã đầy đủ thông tin
+			return hoaDonBan;
+		}*/
+
+        public void UpdateTriGiaHDB(HoaDonBan hoaDonBan)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaHDB", hoaDonBan.MaHDB),
+                new SqlParameter("@TriGia", hoaDonBan.TriGia)
+            };
+
+            dbProcess.ExecuteNonQuery("UpdateTriGiaHDB", parameters);
+        }
+
+        public void DeleteChiTietHoaDonBan(string maHDB, string maSP)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaHDB", maHDB),
+                new SqlParameter("@MaSP", maSP)
+            };
+
+            dbProcess.ExecuteNonQuery("DeleteChiTietHoaDonBan", parameters);
+        }
     }
 }

@@ -37,6 +37,8 @@ namespace QLQuanCF.PresentationLayer.Management
             ShowDetail(false);
             SetButtonState(true, false, false, false, false);
             dataHDB.Dock = DockStyle.Fill;
+            txtTenNV.Text = _loggedInNhanVien.TenNV;
+            cbMaNV.Text = _loggedInNhanVien.MaNV;
         }
 
         private void LoadData()
@@ -50,8 +52,6 @@ namespace QLQuanCF.PresentationLayer.Management
         private void LoadHDBData()
         {
             dataHDB.DataSource = _hoaDonBanBLL.GetAllHDB();
-            txtTenNV.Text = _loggedInNhanVien.TenNV;
-            cbMaNV.Text = _loggedInNhanVien.MaNV;
 
             cbSearchHDB.DataSource = _hoaDonBanBLL.GetAllHDB();
             cbSearchHDB.DisplayMember = "MaHDB";
@@ -393,20 +393,48 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void dataChiTietHoaDonBan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn bán hàng này không?", "Xóa hóa đơn", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    //dataChiTietHoaDonBan.Rows.RemoveAt(e.RowIndex);
-                    //UpdateTriGia();
-                    var dataSource = (List<ChiTietHoaDonBan>)dataChiTietHoaDonBan.DataSource;
-                    dataSource.RemoveAt(e.RowIndex);
-                    dataChiTietHoaDonBan.DataSource = null;
-                    dataChiTietHoaDonBan.DataSource = dataSource;
-                    UpdateTriGia();
+                    try
+                    {
+                        DataGridViewRow row = dataChiTietHoaDonBan.Rows[e.RowIndex];
+                        string maHDB = txtMaHDB.Text;
+                        string maSP = row.Cells["MaSP"].Value.ToString();
+                        
+                        _hoaDonBanBLL.DeleteChiTietHoaDonBan(maHDB, maSP);
+                        var dataSource = (List<ChiTietHoaDonBan>)dataChiTietHoaDonBan.DataSource;
+                        dataSource.RemoveAt(e.RowIndex);
+                        dataChiTietHoaDonBan.DataSource = null;
+                        dataChiTietHoaDonBan.DataSource = dataSource;
+                        
+                        UpdateTriGia();
+                        SaveUpdatedTriGia();
+
+                        dataHDB.DataSource = null;
+                        LoadHDBData();
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        Console.WriteLine($"Xảy ra lỗi: {ex.Message}");
+                    }
                 }
-                
             }
+        }
+
+        private void SaveUpdatedTriGia()
+        {
+            string maHDB = txtMaHDB.Text;
+            decimal triGia = Convert.ToDecimal(txtTriGia.Text);
+
+            HoaDonBan hoaDonBan = new HoaDonBan
+            {
+                MaHDB = maHDB,
+                TriGia = triGia
+            };
+
+            _hoaDonBanBLL.UpdateTriGiaHDB(hoaDonBan);
         }
 
         private void LoadChiTietHoaDonBan(string maHDB)

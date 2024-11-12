@@ -92,11 +92,6 @@ namespace QLQuanCF.PresentationLayer.Management
             }
         }
 
-        private void LoadDataFindSalaryByMaNV()
-        {
-            dataLuong.DataSource = chiTietLuongBLL.GetLuongThangByMaNV(cbSearch.SelectedValue.ToString(), dateNgayDK.Value);
-        }
-
         private void ThongKeLuong()
         {
             dataLuong.DataSource = chiTietLuongBLL.ThongKeLuongThang(dateNgayDK.Value);
@@ -196,13 +191,14 @@ namespace QLQuanCF.PresentationLayer.Management
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            dataChiTietLuong.Visible = false;
+            dataLuong.Dock = DockStyle.Fill;
             isCheck = true;
             isDetails = false;
             ClearFormInputs();
             LoadDataLuong();
             SetButtonState(true, false, false);
-            dataChiTietLuong.Visible = true;
-            dataLuong.Dock = DockStyle.Fill;
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

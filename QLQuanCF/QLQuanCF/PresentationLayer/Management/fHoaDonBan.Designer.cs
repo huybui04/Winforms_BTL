@@ -887,6 +887,7 @@
             this.Controls.Add(this.panel22);
             this.Controls.Add(this.panel15);
             this.Name = "fHoaDonBan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hóa Đơn Bán";
             this.groupBox14.ResumeLayout(false);
             this.panel36.ResumeLayout(false);

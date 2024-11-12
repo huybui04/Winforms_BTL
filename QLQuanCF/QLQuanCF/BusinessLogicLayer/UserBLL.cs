@@ -30,7 +30,7 @@ namespace QLQuanCF.BusinessLogicLayer
         }
 
         // Hàm lấy thông tin người dùng theo tên đăng nhập
-        public User GetUser(string username)
+        public User GetUserByUsername(string username)
         {
             return _userDAL.GetUserByUsername(username);
         }

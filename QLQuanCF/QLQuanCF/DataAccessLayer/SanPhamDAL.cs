@@ -130,5 +130,30 @@ namespace QLQuanCF.DataAccessLayer
 
             return null;
         }
-    }
+
+		public List<SanPham> GetSanPhamByDanhMuc(string maDM)
+		{
+			SqlParameter[] parameters = new SqlParameter[]
+			{
+		        new SqlParameter("@MaDM", maDM) 
+			};
+
+			DataTable dataTable = _dbProcess.ExecuteQuery("GetSanPhamByDanhMuc", parameters);
+
+			List<SanPham> sanPhamList = new List<SanPham>();
+			foreach (DataRow row in dataTable.Rows)
+			{
+				SanPham sanPham = new SanPham
+				{
+					MaSP = row["MaSP"].ToString(),
+					TenSP = row["TenSP"].ToString(),
+					Gia = Convert.ToDecimal(row["Gia"]),
+					Anh = row["Anh"].ToString()  
+				};
+				sanPhamList.Add(sanPham);
+			}
+
+			return sanPhamList;
+		}
+	}
 }
