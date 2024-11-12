@@ -155,5 +155,26 @@ namespace QLQuanCF.DataAccessLayer
 
 			return sanPhamList;
 		}
-	}
+
+        public bool IsProductNameExist(string tenSP)
+        {
+            string queryTenSP = "N'" + tenSP.Replace("'", "''") + "'";
+            SqlParameter[] parameters =
+                    {
+                new SqlParameter("@TenSP", tenSP)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("CheckProductNameExists", parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                // Nếu kết quả trả về là 1, có sản phẩm trùng mã
+                return Convert.ToInt32(dataTable.Rows[0]["IsProductNameExist"]) == 1;
+            }
+
+            // Nếu không có dữ liệu hoặc không tìm thấy trùng, trả về false
+            return false;
+        }
+
+    }
 }

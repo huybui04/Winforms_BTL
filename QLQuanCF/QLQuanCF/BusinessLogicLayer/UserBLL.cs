@@ -29,10 +29,22 @@ namespace QLQuanCF.BusinessLogicLayer
             return false;
         }
 
+        public bool CheckIfUsernameExists(string username)
+        {
+            // Query the database to check if the username already exists
+            var existingUser = _userDAL.GetUserByUsername(username);
+            return existingUser != null;
+        }
+
         // Hàm lấy thông tin người dùng theo tên đăng nhập
         public User GetUserByUsername(string username)
         {
             return _userDAL.GetUserByUsername(username);
+        }
+
+        public List<User> GetAllUserByUsername(string username)
+        {
+            return _userDAL.GetAllUserByUsername(username);
         }
 
         // Hàm kiểm tra quyền của người dùng (ví dụ: Admin hoặc Staff)
@@ -44,6 +56,51 @@ namespace QLQuanCF.BusinessLogicLayer
                 return true;
             }
             return false;
+        }
+
+        // Hàm thêm người dùng mới
+        public void AddUser(User user)
+        {
+            if (!string.IsNullOrEmpty(user.Username) && !string.IsNullOrEmpty(user.Password))
+            {
+                _userDAL.AddUser(user);
+            }
+            else
+            {
+                throw new ArgumentException("Tên người dùng và mật khẩu không được để trống.");
+            }
+        }
+
+        // Hàm cập nhật thông tin người dùng
+        public void UpdateUser(User user)
+        {
+            if (!string.IsNullOrEmpty(user.Username))
+            {
+                _userDAL.UpdateUser(user);
+            }
+            else
+            {
+                throw new ArgumentException("Tên người dùng không được để trống.");
+            }
+        }
+
+        // Hàm xóa người dùng
+        public void DeleteUser(string username)
+        {
+            if (!string.IsNullOrEmpty(username))
+            {
+                _userDAL.DeleteUser(username);
+            }
+            else
+            {
+                throw new ArgumentException("Tên người dùng không được để trống.");
+            }
+        }
+
+        // Hàm lấy tất cả người dùng
+        public List<User> GetAllUsers()
+        {
+            return _userDAL.GetAllUsers();
         }
     }
 }

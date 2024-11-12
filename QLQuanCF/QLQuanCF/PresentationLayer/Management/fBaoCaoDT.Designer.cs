@@ -136,6 +136,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBaoCao);
             this.Name = "fBaoCaoDT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBaoCao";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCao)).EndInit();
             this.ResumeLayout(false);

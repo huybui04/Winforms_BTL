@@ -83,13 +83,16 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BaoCaoBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietLuongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\OrderDetailsBLL.cs" />
     <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
     <Compile Include="BusinessLogicLayer\UserBLL.cs" />
     <Compile Include="Classes\DbConfig.cs" />
     <Compile Include="DataAccessLayer\BaoCaoDAL.cs" />
     <Compile Include="DataAccessLayer\ChiTietLuongDAL.cs" />
+    <Compile Include="DataAccessLayer\HoaDonNhapDAL.cs" />
     <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="BusinessLogicLayer\BanBLL.cs" />
     <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="DataAccessLayer\DbProcess.cs" />
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="DataAccessLayer\OrderDetailsDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
     <Compile Include="DataAccessLayer\UserDAL.cs" />
     <Compile Include="Models\Luong.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PresentationLayer\fChiTietHDB.cs">
@@ -168,6 +173,12 @@
     </Compile>
     <Compile Include="PresentationLayer\Management\fHoaDonBan.Designer.cs">
       <DependentUpon>fHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fHoaDonNhap.Designer.cs">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Management\fKhachHang.cs">
       <SubType>Form</SubType>
@@ -235,6 +246,12 @@
     <Compile Include="PresentationLayer\Management\fSanPham.Designer.cs">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Management\fUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fUser.Designer.cs">
+      <DependentUpon>fUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ShiftRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fHoaDonBan.resx">
       <DependentUpon>fHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fHoaDonNhap.resx">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
@@ -296,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fSanPham.resx">
       <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fUser.resx">
+      <DependentUpon>fUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ShiftRegister.resx">
       <DependentUpon>ShiftRegister.cs</DependentUpon>

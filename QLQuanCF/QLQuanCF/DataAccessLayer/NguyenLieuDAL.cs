@@ -109,5 +109,27 @@ namespace QLQuanCF.BusinessLogicLayer
 
             return lstNguyenLieu;
         }
+
+        public bool CheckNguyenLieuConHayHet(string tenSP)
+        {
+            // Tạo tham số cho stored procedure
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@TenSP", tenSP)
+            };
+
+            // Thực thi câu lệnh SQL để kiểm tra nguyên liệu
+            DataTable dataTable = _dbProcess.ExecuteQuery("CheckNguyenLieuConHayHet", parameters);
+
+            // Kiểm tra nếu có ít nhất một nguyên liệu hết
+            // Nếu có, trả về false (nguyên liệu hết)
+            if (dataTable.Rows.Count > 0 && Convert.ToInt32(dataTable.Rows[0]["Result"]) == 0)
+            {
+                return false; // Có nguyên liệu hết
+            }
+
+            return true; // Tất cả nguyên liệu còn
+        }
+
     }
 }

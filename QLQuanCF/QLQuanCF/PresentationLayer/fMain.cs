@@ -22,7 +22,9 @@ namespace QLQuanCF
 		private HoaDonBanBLL _hoaDonBanBLL = new HoaDonBanBLL(Classes.DbConfig.connectString);
 		private KhachHangBLL _khachHangBLL = new KhachHangBLL(Classes.DbConfig.connectString);
 		private SanPhamBLL _sanPhamBLL = new SanPhamBLL(Classes.DbConfig.connectString);
-		private User _currentUser;
+		private OrderDetailsBLL _orderDetailsBLL = new OrderDetailsBLL(Classes.DbConfig.connectString);
+		private NguyenLieuBLL _nguyenLieuBLL = new NguyenLieuBLL(Classes.DbConfig.connectString);
+        private User _currentUser;
 		private NhanVien _nhanVien;
 		private Ban currentSelectedBan;
 
@@ -35,26 +37,9 @@ namespace QLQuanCF
 			InitializeComponent();
 			LoadKhuVuc();
 			LoadAllTables();
-<<<<<<< HEAD
-            SetUserPermissions();
-        }
-        private void SetUserPermissions()
-        {
-            if (_currentUser.Role == "Admin")
-            {
-
-            }
-            else if (_currentUser.Role == "Staff")
-            {
-                adminToolStripMenuItem.Visible = false;
-                BaoCaoThongKeToolStripMenuItem.Visible = false;  
-            }
-        }
-=======
 			SetUserPermissions();
 			SetupListViewCTHD();
 		}
->>>>>>> 6eaa1f75e8967b5853550cb345e44f63eec6949a
 
 		private void fMain_Load(object sender, EventArgs e)
 		{
@@ -65,26 +50,14 @@ namespace QLQuanCF
 		{
 			if (_currentUser.Role == "Admin")
 			{
-				// Hiển thị tất cả các menu cho Admin
-				//QLNVStripMenuItem.Visible = true;
-				//QLKHStripMenuItem.Visible = true;
-				//QLNLStripMenuItem.Visible = true;
-				QLDMSPStripMenuItem.Visible = true;
-				QLNCCStripMenuItem.Visible = true;
-				QLKVStripMenuItem.Visible = true;
-				QLBStripMenuItem.Visible = true;
+
 			}
 			else if (_currentUser.Role == "Staff")
 			{
-				// Nhân viên chỉ có quyền truy cập một số menu hạn chế
-				//QLNVStripMenuItem.Visible = false;
-				//QLKHStripMenuItem.Visible = true;
-				//QLNLStripMenuItem.Visible = false;
-				QLDMSPStripMenuItem.Visible = false;
-				QLNCCStripMenuItem.Visible = false;
-				QLKVStripMenuItem.Visible = false;
-				QLBStripMenuItem.Visible = true;
-			}
+                thốngKêToolStripMenuItem.Visible = false;
+				adminToolStripMenuItem.Visible = false;
+
+            }
 		}
 
 		void LoadKhuVuc()
@@ -156,6 +129,21 @@ namespace QLQuanCF
 		{
 			currentSelectedBan = (sender as Button).Tag as Ban;
 			lblTenBan.Text = currentSelectedBan.TenBan;
+
+			lsvCTHD.Items.Clear();
+
+			if(currentSelectedBan.TrangThai == "Đang sử dụng")
+			{
+				List<OrderDetails> orderDetails = _orderDetailsBLL.GetOrderDetailsByTable(currentSelectedBan.MaBan);
+				foreach (OrderDetails orderDetail in orderDetails)
+				{
+					ListViewItem item = new ListViewItem(orderDetail.ItemName);
+					item.SubItems.Add(orderDetail.SoLuong.ToString());
+					item.SubItems.Add(orderDetail.DonGia.ToString());
+					item.SubItems.Add((orderDetail.SoLuong * orderDetail.DonGia).ToString());
+					lsvCTHD.Items.Add(item);
+				}
+			}
 		}
 
 		private void SetupListViewCTHD()
@@ -181,45 +169,113 @@ namespace QLQuanCF
 				return;
 			}
 
+			// Kiểm tra trạng thái bàn. Nếu đang sử dụng, tải món từ cơ sở dữ liệu
+			if (currentSelectedBan.TrangThai == "Đang sử dụng")
+			{
+				LoadSelectedProductsFromDatabase(currentSelectedBan.MaBan);
+			}
+			else
+			{
+				selectedSanPhamList.Clear();
+			}
+
 			fMenuSelection fMenuSelection = new fMenuSelection();
 			if (fMenuSelection.ShowDialog() == DialogResult.OK)
 			{
-				DisplaySelectedProducts(selectedSanPhamList); 
+				// Tạo danh sách tạm thời cho các món mới
+				var sanPhamMoiList = new List<SanPham>();
+
+				foreach (SanPham sanPham in selectedSanPhamList)
+				{
+					// Kiểm tra nếu món đã tồn tại trong cơ sở dữ liệu (hoặc `selectedSanPhamList`)
+					var existingOrder = _orderDetailsBLL.GetOrderDetailsByTable(currentSelectedBan.MaBan)
+										 .FirstOrDefault(od => od.ItemName == sanPham.TenSP);
+
+					if (existingOrder == null)
+					{
+						// Nếu món chưa tồn tại, thêm vào danh sách tạm
+						sanPhamMoiList.Add(sanPham);
+
+						OrderDetails orderDetail = new OrderDetails
+						{
+							MaBan = currentSelectedBan.MaBan,
+							ItemName = sanPham.TenSP,
+							SoLuong = 1,
+							DonGia = sanPham.Gia ?? 0
+						};
+
+						_orderDetailsBLL.AddOrderItem(orderDetail);
+					}
+				}
+
+				// Thêm tất cả món mới từ danh sách tạm vào selectedSanPhamList
+				selectedSanPhamList.AddRange(sanPhamMoiList);
+
+				DisplaySelectedProducts(selectedSanPhamList);
 				CapNhatTrangThaiBanThanhDSD();
 				UpdateTongTien();
 			}
 		}
 
-		public void DisplaySelectedProducts(List<SanPham> selectedSanPhamList)
+		private void LoadSelectedProductsFromDatabase(string maBan)
 		{
-			lsvCTHD.Items.Clear();
+			List<OrderDetails> orderDetailsList = _orderDetailsBLL.GetOrderDetailsByTable(maBan);
 
-			foreach (SanPham sanPham in selectedSanPhamList)
+			// Cập nhật danh sách selectedSanPhamList từ dữ liệu đã lấy
+			selectedSanPhamList.Clear();
+			foreach (var orderDetail in orderDetailsList)
 			{
-				bool exists = false;
-				foreach (ListViewItem item in lsvCTHD.Items)
+				SanPham sanPham = new SanPham
 				{
-					if (item.Text == sanPham.TenSP)
-					{
-						exists = true;
-						break;
-					}
-				}
+					TenSP = orderDetail.ItemName,
+					Gia = orderDetail.DonGia
+				};
 
-				if (!exists && sanPham != null && sanPham.Gia != null)
-				{
-					ListViewItem item = new ListViewItem(sanPham.TenSP);
-					int soLuong = 1;
-					item.SubItems.Add(soLuong.ToString());
-					decimal thanhTien = (decimal)(sanPham.Gia * soLuong);
-					item.SubItems.Add(sanPham.Gia.ToString());
-					item.SubItems.Add(thanhTien.ToString());
-					lsvCTHD.Items.Add(item);
-				}
+				selectedSanPhamList.Add(sanPham);
 			}
 		}
 
-		private void CapNhatTrangThaiBanThanhDSD()
+        public void DisplaySelectedProducts(List<SanPham> selectedSanPhamList)
+        {
+            lsvCTHD.Items.Clear();
+
+            foreach (SanPham sanPham in selectedSanPhamList)
+            {
+                bool exists = false;
+                foreach (ListViewItem item in lsvCTHD.Items)
+                {
+                    if (item.Text == sanPham.TenSP)
+                    {
+                        exists = true;
+                        break;
+                    }
+                }
+
+                if (!exists && sanPham != null && sanPham.Gia != null)
+                {
+                    // Kiểm tra nguyên liệu còn hay hết cho món sản phẩm
+                    bool isNguyenLieuCon = _nguyenLieuBLL.CheckNguyenLieuConHayHet(sanPham.TenSP);  // Sử dụng tên sản phẩm
+
+                    if (isNguyenLieuCon)
+                    {
+                        // Nếu nguyên liệu còn, thêm sản phẩm vào ListView
+                        ListViewItem item = new ListViewItem(sanPham.TenSP);
+                        int soLuong = 1;
+                        item.SubItems.Add(soLuong.ToString());
+                        decimal thanhTien = (decimal)(sanPham.Gia * soLuong);
+                        item.SubItems.Add(sanPham.Gia.ToString());
+                        item.SubItems.Add(thanhTien.ToString());
+                        lsvCTHD.Items.Add(item);
+                    }
+                    else
+                    {
+   
+                    }
+                }
+            }
+        }
+
+        private void CapNhatTrangThaiBanThanhDSD()
 		{
 			if (currentSelectedBan != null && currentSelectedBan.TrangThai == "Trống")
 			{
@@ -412,29 +468,21 @@ namespace QLQuanCF
 
 		private void quảnLýChiLịchLàmViệcCủaNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			//if (_currentUser != null)
-			//{
-			//    NhanVien loggedInNhanVien = _nhanVienBLL.GetNhanVienByMaNV(_currentUser.MaNV);
-
-			//    if (loggedInNhanVien != null)
-			//    {
 			fLichLamViec f = new fLichLamViec();
 			this.Hide();
 			f.ShowDialog();
 			this.Show();
-			//    }
-			//    else
-			//    {
-			//        MessageBox.Show("Không tìm thấy thông tin nhân viên.");
-			//    }
-			//}
-			//else
-			//{
-			//    MessageBox.Show("Thông tin người dùng không hợp lệ.");
-			//}
 		}
 
-		private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			fUser f = new fUser();
+			this.Hide();
+			f.ShowDialog();
+			this.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
@@ -466,6 +514,11 @@ namespace QLQuanCF
 					selectedItem.SubItems[3].Text = total.ToString();
 
 					UpdateTongTien();
+
+					string itemName = selectedItem.Text;
+					string maBan = currentSelectedBan.MaBan; 
+
+					_orderDetailsBLL.UpdateOrderItem(maBan, itemName, newQuantity);
 				}
 				else
 				{
@@ -484,7 +537,14 @@ namespace QLQuanCF
 			{
 				if (MessageBox.Show("Bạn có chắc chắn muốn xóa món này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
 				{
+
 					ListViewItem selectedItem = lsvCTHD.SelectedItems[0];
+
+					string itemName = selectedItem.Text;  
+					string maBan = currentSelectedBan.MaBan;  
+
+					_orderDetailsBLL.DeleteOrderItem(maBan, itemName);
+
 					lsvCTHD.Items.Remove(selectedItem);
 
 					UpdateTongTien();
@@ -516,8 +576,18 @@ namespace QLQuanCF
 
 		private void btnHHD_Click(object sender, EventArgs e)
 		{
-			ResetForm();
-			CapNhatTrangThaiBanThanhTrong();
+			if (currentSelectedBan != null)
+			{
+				_orderDetailsBLL.DeleteOrderDetailsByTable(currentSelectedBan.MaBan);
+
+				CapNhatTrangThaiBanThanhTrong();
+
+				ResetForm();
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng chọn bàn trước khi hủy hóa đơn.");
+			}
 		}
 
 		public void ResetForm()
@@ -598,7 +668,7 @@ namespace QLQuanCF
 				MaBan = currentSelectedBan.MaBan,
 				MaNV = _nhanVien.MaNV,
 				NgayBan = ngayBan,
-				TriGia = tongTien,
+				TriGia = 0,
 				MaKH = _khachHangBLL.GetKhachHangBySDT(soDienThoai).MaKH,
 				ChiTietHoaDonBans = new List<ChiTietHoaDonBan>()
 			};
@@ -632,5 +702,5 @@ namespace QLQuanCF
 			fChiTietHDB fChiTietHDB = new fChiTietHDB(tenBan, ngayBan, tenNhanVien, tenKhachHang, soDienThoai, giamGia, tongTien, listViewItemsClone);
 			fChiTietHDB.ShowDialog();
 		}
-	}
+    }
 }

@@ -37,5 +37,10 @@ namespace QLQuanCF.BusinessLogicLayer
         {
             return _nguyenLieuDAL.SearchNguyenLieu(tenNL);
         }
+
+        public bool CheckNguyenLieuConHayHet(string maSP)
+        {
+            return _nguyenLieuDAL.CheckNguyenLieuConHayHet(maSP);
+        }
     }
 }

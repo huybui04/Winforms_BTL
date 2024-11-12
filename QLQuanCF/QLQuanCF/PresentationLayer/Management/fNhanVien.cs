@@ -81,6 +81,12 @@ namespace QLQuanCF
                 isValid = false;
             }
 
+            if (string.IsNullOrWhiteSpace(dateNgaySinhNV.Text) || !DateTime.TryParse(dateNgaySinhNV.Text, out _))
+            {
+                errorProvider.SetError(dateNgaySinhNV, "Ngày sinh không hợp lệ!");
+                isValid = false;
+            }
+
             if (string.IsNullOrWhiteSpace(txtDiaChiNV.Text))
             {
                 errorProvider.SetError(txtDiaChiNV, "Địa chỉ không được để trống!");

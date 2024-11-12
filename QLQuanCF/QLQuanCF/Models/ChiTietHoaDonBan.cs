@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLQuanCF.Models
 {
-    internal class ChiTietHoaDonBan
+    public class ChiTietHoaDonBan
     {
         public string MaHDB { get; set; }
         public string MaSP { get; set; }

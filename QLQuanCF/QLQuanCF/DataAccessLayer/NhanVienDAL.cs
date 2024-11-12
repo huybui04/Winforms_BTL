@@ -15,6 +15,20 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess = new DbProcess(connectionString);
         }
 
+        public List<string> GetAllMaNV()
+        {
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetAllMaNV", null); 
+            List<string> maNVList = new List<string>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                maNVList.Add(row["MaNV"].ToString()); 
+            }
+
+            return maNVList;
+        }
+
+
         public List<NhanVien> GetAllNhanVien()
         {
             DataTable dataTable = _dbProcess.ExecuteQuery("GetAllNhanVien", null);

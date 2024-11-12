@@ -169,9 +169,9 @@
             // 
             this.btnSearch.Image = global::QLQuanCF.Properties.Resources.search;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(366, 26);
+            this.btnSearch.Location = new System.Drawing.Point(366, 25);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(132, 33);
+            this.btnSearch.Size = new System.Drawing.Size(132, 43);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -194,7 +194,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(880, 83);
+            this.groupBox3.Size = new System.Drawing.Size(936, 83);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             // 
@@ -268,7 +268,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1383, 706);
+            this.panel1.Size = new System.Drawing.Size(1439, 731);
             this.panel1.TabIndex = 1;
             // 
             // panel14
@@ -278,7 +278,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(880, 706);
+            this.panel14.Size = new System.Drawing.Size(936, 731);
             this.panel14.TabIndex = 5;
             // 
             // groupBox4
@@ -287,7 +287,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 83);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(880, 623);
+            this.groupBox4.Size = new System.Drawing.Size(936, 648);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             // 
@@ -300,7 +300,7 @@
             this.dataSP.ReadOnly = true;
             this.dataSP.RowHeadersWidth = 51;
             this.dataSP.RowTemplate.Height = 24;
-            this.dataSP.Size = new System.Drawing.Size(874, 598);
+            this.dataSP.Size = new System.Drawing.Size(930, 623);
             this.dataSP.TabIndex = 0;
             this.dataSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSanPham_CellClick);
             // 
@@ -309,9 +309,9 @@
             this.panel13.Controls.Add(this.groupBox1);
             this.panel13.Controls.Add(this.groupBox2);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(880, 0);
+            this.panel13.Location = new System.Drawing.Point(936, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(503, 706);
+            this.panel13.Size = new System.Drawing.Size(503, 731);
             this.panel13.TabIndex = 4;
             // 
             // groupBox1
@@ -323,7 +323,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(503, 623);
+            this.groupBox1.Size = new System.Drawing.Size(503, 648);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
@@ -412,9 +412,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1383, 706);
+            this.ClientSize = new System.Drawing.Size(1439, 731);
             this.Controls.Add(this.panel1);
             this.Name = "fSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SanPham";
             this.panel50.ResumeLayout(false);
             this.panel50.PerformLayout();

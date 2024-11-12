@@ -13,6 +13,7 @@ namespace QLQuanCF
     {
 		private DMSanPhamBLL _danhMucBLL = new DMSanPhamBLL(Classes.DbConfig.connectString);
 		private SanPhamBLL _sanPhamBLL = new SanPhamBLL(Classes.DbConfig.connectString);
+		private NguyenLieuBLL _nguyenLieuBLL = new NguyenLieuBLL(Classes.DbConfig.connectString);
 
 		private Dictionary<string, bool> checkboxStates = new Dictionary<string, bool>();
 		private List<SanPham> listSanPham = new List<SanPham>();
@@ -174,11 +175,6 @@ namespace QLQuanCF
 			LayDanhSachMonDaChon();
 
 			fMain formMain = (fMain)Application.OpenForms["fMain"];
-			if (formMain == null)
-			{
-				MessageBox.Show("Không tìm thấy form chính.");
-				return;
-			}
 
 			if (selectedSanPhamList.Count > 0)
 			{
@@ -196,33 +192,48 @@ namespace QLQuanCF
 				this.DialogResult = DialogResult.OK;
 				this.Close();
 			}
-			else
-			{
-				MessageBox.Show("Vui lòng chọn ít nhất một món.");
-			}
 		}
 
-		private void LayDanhSachMonDaChon()
-		{
-			selectedSanPhamList.Clear(); 
+        private void LayDanhSachMonDaChon()
+        {
+            selectedSanPhamList.Clear();
 
-			foreach (DataGridViewRow row in dgvSP.Rows)
-			{
-				// Giả sử có cột checkbox để xác định món được chọn
-				bool isSelected = Convert.ToBoolean(row.Cells["chkSelect"].Value);
-				if (isSelected)
-				{
-					SanPham sp = new SanPham
-					{
-						TenSP = row.Cells["TenSP"].Value.ToString(),
-						Gia = Convert.ToDecimal(row.Cells["Gia"].Value)
-					};
-					selectedSanPhamList.Add(sp);
-				}
-			}
-		}
+            foreach (DataGridViewRow row in dgvSP.Rows)
+            {
+                // Giả sử có cột checkbox để xác định món được chọn
+                bool isSelected = Convert.ToBoolean(row.Cells["chkSelect"].Value);
+                if (isSelected)
+                {
+                    // Lấy thông tin món sản phẩm từ dòng
+                    string tenSP = row.Cells["TenSP"].Value.ToString();
+                    decimal gia = Convert.ToDecimal(row.Cells["Gia"].Value);
 
-		private void dgvSP_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+                    // Tạo đối tượng sản phẩm
+                    SanPham sp = new SanPham
+                    {
+                        TenSP = tenSP,
+                        Gia = gia
+                    };
+
+                    // Kiểm tra nguyên liệu còn hay hết bằng tên sản phẩm
+                    bool isNguyenLieuCon = _nguyenLieuBLL.CheckNguyenLieuConHayHet(tenSP);  // Sử dụng tên sản phẩm thay vì mã sản phẩm
+
+                    if (isNguyenLieuCon)
+                    {
+                        // Nếu nguyên liệu còn, thêm sản phẩm vào danh sách
+                        selectedSanPhamList.Add(sp);
+                    }
+                    else
+                    {
+                        // Nếu nguyên liệu hết, thông báo cho người dùng hoặc xử lý tùy ý
+                        MessageBox.Show($"Nguyên liệu cho món {tenSP} đã hết, vui lòng chọn món khác.");
+                    }
+                }
+            }
+        }
+
+
+        private void dgvSP_CellValueChanged(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.ColumnIndex == dgvSP.Columns["chkSelect"].Index && e.RowIndex >= 0)
 			{

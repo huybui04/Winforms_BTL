@@ -316,6 +316,7 @@
             this.ClientSize = new System.Drawing.Size(1302, 674);
             this.Controls.Add(this.panel1);
             this.Name = "fLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLuong";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

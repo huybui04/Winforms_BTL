@@ -59,5 +59,10 @@ namespace QLQuanCF.BusinessLogicLayer
 		{
 			return _sanPhamDAL.GetSanPhamByDanhMuc(maDM);
 		}
-	}
+
+        public bool IsProductNameExist(string maSP)
+        {
+            return _sanPhamDAL.IsProductNameExist(maSP);
+        }
+    }
 }

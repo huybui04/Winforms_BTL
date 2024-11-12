@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLQuanCF.Models
 {
-    internal class ChiTietHoaDonNhap
+    public class ChiTietHoaDonNhap
     {
         public string MaHDN { get; set; }
         public string MaNL { get; set; }

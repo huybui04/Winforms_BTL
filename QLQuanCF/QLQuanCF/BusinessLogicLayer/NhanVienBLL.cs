@@ -14,6 +14,11 @@ namespace QLQuanCF.BusinessLogicLayer
             _nhanVienDAL = new NhanVienDAL(connectionString);
         }
 
+        public List<string> GetALlMaNV()
+        {
+            return _nhanVienDAL.GetAllMaNV();
+        }
+
         public List<NhanVien> GetAllNhanVien()
         {
             return _nhanVienDAL.GetAllNhanVien();

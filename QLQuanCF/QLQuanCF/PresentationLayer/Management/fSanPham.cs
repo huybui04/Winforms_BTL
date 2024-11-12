@@ -96,9 +96,20 @@ namespace QLQuanCF.PresentationLayer
                 isValid = false;
             }
 
+            if (cbDM.SelectedIndex == -1)
+            {
+                errorProvider.SetError(cbDM, "Danh mục không được để trống!");
+                isValid = false;
+            }
+
+            if (string.IsNullOrEmpty(pbSP.Text))
+            {
+                MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isValid = false;
+            }
+
             return isValid;
         }
-
 
         private void ClearInputFields()
         {
@@ -175,20 +186,26 @@ namespace QLQuanCF.PresentationLayer
         {
             if (!ValidateInput()) return;
 
+            // Kiểm tra mã sản phẩm có bị trùng lặp hay không
+            if (_sanPhamBLL.IsProductNameExist(txtMaSP.Text))
+            {
+                MessageBox.Show("Mã sản phẩm đã tồn tại. Vui lòng chọn mã khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             decimal? gia = null;
             if (decimal.TryParse(txtGiaSP.Text, out decimal parsedGia))
             {
                 gia = parsedGia;
             }
 
-            // Lưu tên ảnh vào cơ sở dữ liệu
             var sanPham = new SanPham
             {
                 MaSP = txtMaSP.Text,
                 TenSP = txtTenSP.Text,
                 Gia = gia,
                 MaDM = cbDM.SelectedValue?.ToString(),
-                Anh = !string.IsNullOrEmpty(pbSP.Text) ? pbSP.Text : null, // Lưu tên ảnh nếu có
+                Anh = !string.IsNullOrEmpty(pbSP.Text) ? pbSP.Text : null,
             };
 
             if (isAdding)

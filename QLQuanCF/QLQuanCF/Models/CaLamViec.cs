@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLQuanCF.Models
 {
-    internal class CaLamViec
+    public class CaLamViec
     {
         public string MaCa { get; set; }
         public string TenCa { get; set; }

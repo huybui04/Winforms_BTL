@@ -28,6 +28,7 @@ namespace QLQuanCF.DataAccessLayer
             {
                 User user = new User
                 {
+                    UserID = row["UserID"].ToString(),
                     Username = row["Username"].ToString(),
                     Password = row["Password"].ToString(),
                     Role = row["Role"].ToString(),
@@ -53,6 +54,7 @@ namespace QLQuanCF.DataAccessLayer
             return result > 0;
         }
 
+
         // Thêm người dùng mới
         public void AddUser(User user)
         {
@@ -67,11 +69,11 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess.ExecuteNonQuery("AddUser", parameters);
         }
 
-        // Cập nhật thông tin người dùng
         public void UpdateUser(User user)
         {
             SqlParameter[] parameters =
             {
+                new SqlParameter("@UserID", user.UserID),  
                 new SqlParameter("@Username", user.Username),
                 new SqlParameter("@Password", user.Password),
                 new SqlParameter("@Role", user.Role),
@@ -81,7 +83,7 @@ namespace QLQuanCF.DataAccessLayer
             _dbProcess.ExecuteNonQuery("UpdateUser", parameters);
         }
 
-        // Xóa người dùng
+
         public void DeleteUser(string username)
         {
             SqlParameter[] parameters =
@@ -117,14 +119,42 @@ namespace QLQuanCF.DataAccessLayer
                 DataRow row = dataTable.Rows[0];
                 return new User
                 {
+                    UserID = row["UserID"].ToString(),
                     Username = row["Username"].ToString(),
                     Password = row["Password"].ToString(),
                     Role = row["Role"].ToString(),
-                    MaNV = row["MaNV"].ToString()              
+                    MaNV = row["MaNV"].ToString()
                 };
             }
 
-            return null; // Nếu không tìm thấy người dùng
+            return null;
         }
+
+        public List<User> GetAllUserByUsername(string username)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@Username", username)
+            };
+
+            DataTable dataTable = _dbProcess.ExecuteQuery("GetAllUserByUsername", parameters);
+            List<User> userList = new List<User>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                userList.Add(new User
+                {
+                    UserID = row["UserID"].ToString(),
+                    Username = row["Username"].ToString(),
+                    Password = row["Password"].ToString(),
+                    Role = row["Role"].ToString(),
+                    MaNV = row["MaNV"].ToString()
+                });
+            }
+
+            return userList; // Trả về danh sách người dùng (có thể là rỗng nếu không tìm thấy)
+        }
+
+
     }
 }
