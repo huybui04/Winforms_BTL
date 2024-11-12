@@ -703,6 +703,12 @@ namespace QLQuanCF
 			fChiTietHDB.ShowDialog();
 		}
 
-        
+        private void quảnLýChiTiếtSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChiTietSanPham f = new fChiTietSanPham();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

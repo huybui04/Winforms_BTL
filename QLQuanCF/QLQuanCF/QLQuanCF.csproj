@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BaoCaoBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietLuongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietSanPhamBLL.cs" />
     <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
     <Compile Include="BusinessLogicLayer\OrderDetailsBLL.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Classes\DbConfig.cs" />
     <Compile Include="DataAccessLayer\BaoCaoDAL.cs" />
     <Compile Include="DataAccessLayer\ChiTietLuongDAL.cs" />
+    <Compile Include="DataAccessLayer\ChiTietSanPhamDAL.cs" />
     <Compile Include="DataAccessLayer\LuongDAL.cs" />
     <Compile Include="BusinessLogicLayer\BanBLL.cs" />
     <Compile Include="BusinessLogicLayer\CaLamViecBLL.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="DataAccessLayer\OrderDetailsDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
     <Compile Include="DataAccessLayer\UserDAL.cs" />
+    <Compile Include="Models\ChiTietSanPham.cs" />
     <Compile Include="Models\Luong.cs" />
     <Compile Include="Models\Ban.cs" />
     <Compile Include="Models\CaLamViec.cs" />
@@ -159,6 +162,12 @@
     </Compile>
     <Compile Include="PresentationLayer\Management\fCaLamViec.Designer.cs">
       <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Management\fChiTietSanPham.Designer.cs">
+      <DependentUpon>fChiTietSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Management\fDMSanPham.cs">
       <SubType>Form</SubType>
@@ -266,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fCaLamViec.resx">
       <DependentUpon>fCaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Management\fChiTietSanPham.resx">
+      <DependentUpon>fChiTietSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Management\fDMSanPham.resx">
       <DependentUpon>fDMSanPham.cs</DependentUpon>

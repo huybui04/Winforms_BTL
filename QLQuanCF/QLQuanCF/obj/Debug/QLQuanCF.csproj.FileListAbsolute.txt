@@ -171,16 +171,12 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fSanPham.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
-<<<<<<< HEAD
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fThongKeLuong.resources
-=======
 >>>>>>> 37b7b601d4110c1fd83bbe98f6715531d0e5f510
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fLichLamViec.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.ShiftRegister.resources
 D:\Semester_1_2024_2025\LTTQ\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fBaoCaoDT.resources
 >>>>>>> 41de3f9a6d4bc7880c6afa4e3a04853d737bd747
-<<<<<<< HEAD
->>>>>>> 37b7b601d4110c1fd83bbe98f6715531d0e5f510
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.dll
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.Interfaces.dll
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\bin\Debug\EPPlus.System.Drawing.dll
@@ -200,5 +196,4 @@ F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.fNhapKH.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fBaoCaoDT.resources
 F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.csproj.Up2Date
-=======
->>>>>>> 37b7b601d4110c1fd83bbe98f6715531d0e5f510
+F:\workspace\visual_studio_src\Winforms_BTL\QLQuanCF\QLQuanCF\obj\Debug\QLQuanCF.PresentationLayer.Management.fChiTietSanPham.resources
