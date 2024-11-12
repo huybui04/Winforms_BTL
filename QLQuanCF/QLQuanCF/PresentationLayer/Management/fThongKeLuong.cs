@@ -97,10 +97,9 @@ namespace QLQuanCF.PresentationLayer.Management
             dataLuong.DataSource = chiTietLuongBLL.ThongKeLuongThang(dateNgayDK.Value);
         }
 
-        private void SetButtonState(bool details, bool print, bool cancel)
+        private void SetButtonState(bool details, bool cancel)
         {
             btnThongKe.Enabled = details;
-            btnIn.Enabled = print;
             btnCancel.Enabled = cancel;
         }
 
@@ -197,7 +196,7 @@ namespace QLQuanCF.PresentationLayer.Management
             isDetails = false;
             ClearFormInputs();
             LoadDataLuong();
-            SetButtonState(true, false, false);
+            SetButtonState(true, false);
             
         }
 
@@ -218,7 +217,7 @@ namespace QLQuanCF.PresentationLayer.Management
             else
             {
                 dataLuong.DataSource = chiTietLuongBLL.GetLuongThangByMaNV(cbSearch.Text, dateNgayDK.Value);
-                SetButtonState(true, false, true);
+                SetButtonState(true, true);
                 ClearFormInputs();
                 DataGridViewRow row = dataLuong.Rows[0];
                 cbMaNV.Text = row.Cells["MaNV"].Value.ToString();
@@ -235,7 +234,7 @@ namespace QLQuanCF.PresentationLayer.Management
             isDetails = true;
 
             ClearFormInputs();
-            SetButtonState(false, true, true);
+            SetButtonState(false, false);
             dataChiTietLuong.Visible = false;
             dataLuong.Dock = DockStyle.Fill;
         }

@@ -30,10 +30,7 @@
         {
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.cbSearch = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTongLuong = new System.Windows.Forms.TextBox();
@@ -59,13 +56,15 @@
             this.panel36 = new System.Windows.Forms.Panel();
             this.cbMaNV = new System.Windows.Forms.ComboBox();
             this.lblMaNV = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnIn = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.dataChiTietLuong = new System.Windows.Forms.DataGridView();
             this.dataLuong = new System.Windows.Forms.DataGridView();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox14.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -105,26 +104,10 @@
             this.cbSearch.Size = new System.Drawing.Size(227, 21);
             this.cbSearch.TabIndex = 2;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Image = global::QLQuanCF.Properties.Resources.search;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(249, 15);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnSearch.Size = new System.Drawing.Size(82, 40);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.btnThongKe);
             this.groupBox16.Controls.Add(this.btnExit);
-            this.groupBox16.Controls.Add(this.btnIn);
             this.groupBox16.Controls.Add(this.btnCancel);
             this.groupBox16.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox16.Location = new System.Drawing.Point(0, 0);
@@ -134,36 +117,6 @@
             this.groupBox16.Size = new System.Drawing.Size(668, 63);
             this.groupBox16.TabIndex = 0;
             this.groupBox16.TabStop = false;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Image = global::QLQuanCF.Properties.Resources.edit;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(35, 15);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(137, 40);
-            this.btnThongKe.TabIndex = 2;
-            this.btnThongKe.Text = "Thống kê chi tiết";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = global::QLQuanCF.Properties.Resources.exit;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(550, 15);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnExit.Size = new System.Drawing.Size(82, 40);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExitHDB_Click);
             // 
             // groupBox13
             // 
@@ -422,34 +375,6 @@
             this.lblMaNV.TabIndex = 0;
             this.lblMaNV.Text = "Mã nhân viên:";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = global::QLQuanCF.Properties.Resources.cancel;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(385, 15);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnCancel.Size = new System.Drawing.Size(82, 40);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIn.Location = new System.Drawing.Point(225, 15);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnIn.Size = new System.Drawing.Size(82, 40);
-            this.btnIn.TabIndex = 3;
-            this.btnIn.Text = "In";
-            this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIn.UseVisualStyleBackColor = true;
-            // 
             // panel22
             // 
             this.panel22.Controls.Add(this.groupBox15);
@@ -512,6 +437,66 @@
             this.panel15.Size = new System.Drawing.Size(337, 619);
             this.panel15.TabIndex = 6;
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Image = global::QLQuanCF.Properties.Resources.edit;
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(35, 15);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnThongKe.Size = new System.Drawing.Size(137, 40);
+            this.btnThongKe.TabIndex = 2;
+            this.btnThongKe.Text = "Thống kê chi tiết";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::QLQuanCF.Properties.Resources.exit;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(484, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnExit.Size = new System.Drawing.Size(82, 40);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExitHDB_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = global::QLQuanCF.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(283, 15);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnCancel.Size = new System.Drawing.Size(82, 40);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Image = global::QLQuanCF.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(249, 15);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnSearch.Size = new System.Drawing.Size(82, 40);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // fThongKeLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,7 +544,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.DataGridView dataChiTietLuong;
