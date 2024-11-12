@@ -58,7 +58,11 @@ namespace QLQuanCF.BusinessLogicLayer
 			return hoaDonBanDAL.GetLastMaHDB();
 		}
 
+<<<<<<< HEAD
         /*public HoaDonBan GetHoaDonInfoByMaBan(string maBan)
+=======
+		/*public HoaDonBan GetHoaDonInfoByMaBan(string maBan)
+>>>>>>> 37b7b601d4110c1fd83bbe98f6715531d0e5f510
 		{
 			return hoaDonBanDAL.GetHoaDonInfoByMaBan(maBan);
 		}
@@ -67,6 +71,7 @@ namespace QLQuanCF.BusinessLogicLayer
 		{
 			return hoaDonBanDAL.ShowBill(maBan);
 		}*/
+<<<<<<< HEAD
 
         public void UpdateTriGiaHDB(HoaDonBan hoaDonBan)
         {
@@ -79,4 +84,7 @@ namespace QLQuanCF.BusinessLogicLayer
         }
 
     }
+=======
+	}
+>>>>>>> 37b7b601d4110c1fd83bbe98f6715531d0e5f510
 }

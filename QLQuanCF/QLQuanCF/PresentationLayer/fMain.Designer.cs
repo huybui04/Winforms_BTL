@@ -96,15 +96,15 @@
             this.thôngTinTàiKhoảnToolStripMenuItem,
             this.đăngKýLịchLàmViệcToolStripMenuItem,
             this.ExitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1114, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // adminToolStripMenuItem
-            // 
-            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(1114, 30);
+			this.menuStrip1.TabIndex = 1;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// adminToolStripMenuItem
+			// 
+			this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýNhânViênToolStripMenuItem,
             this.quảnLýKháchHàngToolStripMenuItem,
             this.QLNLToolStripMenuItem,
@@ -114,7 +114,6 @@
             this.QLBStripMenuItem,
             this.quảnLýSảnPhẩmToolStripMenuItem,
             this.quảnLýCaLàmViệcToolStripMenuItem,
-            this.quảnLýHóaĐơnBánToolStripMenuItem,
             this.quảnLýLịchLàmViệcCủaNhânViênToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
@@ -599,6 +598,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbBan.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
             this.PerformLayout();
 
         }
