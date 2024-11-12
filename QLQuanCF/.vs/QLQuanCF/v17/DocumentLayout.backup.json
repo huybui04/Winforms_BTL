@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\program files (x86)\\c#\\source\\btl\\qlquancf\\qlquancf\\presentationlayer\\fmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\shiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|d:\\program files (x86)\\c#\\source\\btl\\qlquancf\\qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2568739B-536B-4F11-82DE-E852B532B155}|QLQuanCF\\QLQuanCF.csproj|solutionrelative:qlquancf\\presentationlayer\\management\\flichlamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,70 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fMain.Designer.cs",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.Designer.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.Designer.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.Designer.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.Designer.cs",
-              "ViewState": "AgIAAIICAAAAAAAAAAAIwI4CAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T17:16:10.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "fLichLamViec.cs",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\Management\\fLichLamViec.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAswAsBAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T17:13:22.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ShiftRegister.cs",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAkwIcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T16:52:39.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "fMain.cs",
               "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",
               "ToolTip": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeToolTip": "QLQuanCF\\PresentationLayer\\fMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAALwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T16:53:41.811Z",
+              "WhenOpened": "2024-11-12T00:54:36.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ShiftRegister.cs [Design]",
-              "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs",
-              "ToolTip": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\ShiftRegister.cs [Design]",
-              "RelativeToolTip": "QLQuanCF\\PresentationLayer\\ShiftRegister.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T16:51:34.73Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "fMain.cs [Design]",
               "DocumentMoniker": "D:\\Program Files (x86)\\C#\\source\\BTL\\QLQuanCF\\QLQuanCF\\PresentationLayer\\fMain.cs",
               "RelativeDocumentMoniker": "QLQuanCF\\PresentationLayer\\fMain.cs",

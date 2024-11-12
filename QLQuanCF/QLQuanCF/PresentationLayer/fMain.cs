@@ -22,6 +22,7 @@ namespace QLQuanCF
 		private HoaDonBanBLL _hoaDonBanBLL = new HoaDonBanBLL(Classes.DbConfig.connectString);
 		private KhachHangBLL _khachHangBLL = new KhachHangBLL(Classes.DbConfig.connectString);
 		private SanPhamBLL _sanPhamBLL = new SanPhamBLL(Classes.DbConfig.connectString);
+		private OrderDetailsBLL _orderDetailsBLL = new OrderDetailsBLL(Classes.DbConfig.connectString);
 		private User _currentUser;
 		private NhanVien _nhanVien;
 		private Ban currentSelectedBan;
@@ -139,6 +140,21 @@ namespace QLQuanCF
 		{
 			currentSelectedBan = (sender as Button).Tag as Ban;
 			lblTenBan.Text = currentSelectedBan.TenBan;
+
+			lsvCTHD.Items.Clear();
+
+			if(currentSelectedBan.TrangThai == "Đang sử dụng")
+			{
+				List<OrderDetails> orderDetails = _orderDetailsBLL.GetOrderDetailsByTable(currentSelectedBan.MaBan);
+				foreach (OrderDetails orderDetail in orderDetails)
+				{
+					ListViewItem item = new ListViewItem(orderDetail.ItemName);
+					item.SubItems.Add(orderDetail.SoLuong.ToString());
+					item.SubItems.Add(orderDetail.DonGia.ToString());
+					item.SubItems.Add((orderDetail.SoLuong * orderDetail.DonGia).ToString());
+					lsvCTHD.Items.Add(item);
+				}
+			}
 		}
 
 		private void SetupListViewCTHD()
@@ -164,12 +180,69 @@ namespace QLQuanCF
 				return;
 			}
 
+			// Kiểm tra trạng thái bàn. Nếu đang sử dụng, tải món từ cơ sở dữ liệu
+			if (currentSelectedBan.TrangThai == "Đang sử dụng")
+			{
+				LoadSelectedProductsFromDatabase(currentSelectedBan.MaBan);
+			}
+			else
+			{
+				selectedSanPhamList.Clear();
+			}
+
 			fMenuSelection fMenuSelection = new fMenuSelection();
 			if (fMenuSelection.ShowDialog() == DialogResult.OK)
 			{
-				DisplaySelectedProducts(selectedSanPhamList); 
+				// Tạo danh sách tạm thời cho các món mới
+				var sanPhamMoiList = new List<SanPham>();
+
+				foreach (SanPham sanPham in selectedSanPhamList)
+				{
+					// Kiểm tra nếu món đã tồn tại trong cơ sở dữ liệu (hoặc `selectedSanPhamList`)
+					var existingOrder = _orderDetailsBLL.GetOrderDetailsByTable(currentSelectedBan.MaBan)
+										 .FirstOrDefault(od => od.ItemName == sanPham.TenSP);
+
+					if (existingOrder == null)
+					{
+						// Nếu món chưa tồn tại, thêm vào danh sách tạm
+						sanPhamMoiList.Add(sanPham);
+
+						OrderDetails orderDetail = new OrderDetails
+						{
+							MaBan = currentSelectedBan.MaBan,
+							ItemName = sanPham.TenSP,
+							SoLuong = 1,
+							DonGia = sanPham.Gia ?? 0
+						};
+
+						_orderDetailsBLL.AddOrderItem(orderDetail);
+					}
+				}
+
+				// Thêm tất cả món mới từ danh sách tạm vào selectedSanPhamList
+				selectedSanPhamList.AddRange(sanPhamMoiList);
+
+				DisplaySelectedProducts(selectedSanPhamList);
 				CapNhatTrangThaiBanThanhDSD();
 				UpdateTongTien();
+			}
+		}
+
+		private void LoadSelectedProductsFromDatabase(string maBan)
+		{
+			List<OrderDetails> orderDetailsList = _orderDetailsBLL.GetOrderDetailsByTable(maBan);
+
+			// Cập nhật danh sách selectedSanPhamList từ dữ liệu đã lấy
+			selectedSanPhamList.Clear();
+			foreach (var orderDetail in orderDetailsList)
+			{
+				SanPham sanPham = new SanPham
+				{
+					TenSP = orderDetail.ItemName,
+					Gia = orderDetail.DonGia
+				};
+
+				selectedSanPhamList.Add(sanPham);
 			}
 		}
 
@@ -449,6 +522,11 @@ namespace QLQuanCF
 					selectedItem.SubItems[3].Text = total.ToString();
 
 					UpdateTongTien();
+
+					string itemName = selectedItem.Text;
+					string maBan = currentSelectedBan.MaBan; 
+
+					_orderDetailsBLL.UpdateOrderItem(maBan, itemName, newQuantity);
 				}
 				else
 				{
@@ -467,7 +545,14 @@ namespace QLQuanCF
 			{
 				if (MessageBox.Show("Bạn có chắc chắn muốn xóa món này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
 				{
+
 					ListViewItem selectedItem = lsvCTHD.SelectedItems[0];
+
+					string itemName = selectedItem.Text;  
+					string maBan = currentSelectedBan.MaBan;  
+
+					_orderDetailsBLL.DeleteOrderItem(maBan, itemName);
+
 					lsvCTHD.Items.Remove(selectedItem);
 
 					UpdateTongTien();
@@ -499,8 +584,18 @@ namespace QLQuanCF
 
 		private void btnHHD_Click(object sender, EventArgs e)
 		{
-			ResetForm();
-			CapNhatTrangThaiBanThanhTrong();
+			if (currentSelectedBan != null)
+			{
+				_orderDetailsBLL.DeleteOrderDetailsByTable(currentSelectedBan.MaBan);
+
+				CapNhatTrangThaiBanThanhTrong();
+
+				ResetForm();
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng chọn bàn trước khi hủy hóa đơn.");
+			}
 		}
 
 		public void ResetForm()

@@ -85,6 +85,7 @@
     <Compile Include="BusinessLogicLayer\ChiTietLuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\LuongBLL.cs" />
     <Compile Include="BusinessLogicLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\OrderDetailsBLL.cs" />
     <Compile Include="BusinessLogicLayer\SanPhamBLL.cs" />
     <Compile Include="BusinessLogicLayer\UserBLL.cs" />
     <Compile Include="Classes\DbConfig.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="DataAccessLayer\DbProcess.cs" />
     <Compile Include="DataAccessLayer\NhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="DataAccessLayer\OrderDetailsDAL.cs" />
     <Compile Include="DataAccessLayer\SanPhamDAL.cs" />
     <Compile Include="DataAccessLayer\UserDAL.cs" />
     <Compile Include="Models\Luong.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PresentationLayer\fChiTietHDB.cs">

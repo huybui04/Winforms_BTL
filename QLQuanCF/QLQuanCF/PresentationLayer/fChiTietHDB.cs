@@ -1,5 +1,6 @@
 ﻿using OfficeOpenXml;
 using QLQuanCF.BusinessLogicLayer;
+using QLQuanCF.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +13,7 @@ namespace QLQuanCF.PresentationLayer
 	{
 		private HoaDonBanBLL _hoaDonBanBLL = new HoaDonBanBLL(Classes.DbConfig.connectString);
 		private BanBLL _BanBLL = new BanBLL(Classes.DbConfig.connectString);
+		private OrderDetailsBLL _orderDetailsBLL = new OrderDetailsBLL(Classes.DbConfig.connectString);
 		public fChiTietHDB(string ban, DateTime ngayBan, string tenNhanVien,
 		string tenKhachHang, string soDienThoai, decimal giamGia, decimal tongTien, List<ListViewItem> items)
 		{
@@ -42,8 +44,17 @@ namespace QLQuanCF.PresentationLayer
 
 		private void btnThanhToan_Click(object sender, EventArgs e)
 		{
-			SaveInvoiceToDatabase();
-			ExportInvoiceToExcel();
+			List<Ban> _banList = _BanBLL.GetBanByName(lblTenBan.Text);
+
+			if (_banList.Count > 0)
+			{
+				string maBan = _banList[0].MaBan;
+				_orderDetailsBLL.DeleteOrderDetailsByTable(maBan);
+
+				SaveInvoiceToDatabase();
+				ExportInvoiceToExcel();
+			}
+
 			this.Close();
 		}
 

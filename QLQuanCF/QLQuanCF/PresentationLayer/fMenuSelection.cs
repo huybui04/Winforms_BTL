@@ -174,11 +174,6 @@ namespace QLQuanCF
 			LayDanhSachMonDaChon();
 
 			fMain formMain = (fMain)Application.OpenForms["fMain"];
-			if (formMain == null)
-			{
-				MessageBox.Show("Không tìm thấy form chính.");
-				return;
-			}
 
 			if (selectedSanPhamList.Count > 0)
 			{
@@ -195,10 +190,6 @@ namespace QLQuanCF
 				// Đặt DialogResult thành OK để form chính biết rằng đã có món được chọn
 				this.DialogResult = DialogResult.OK;
 				this.Close();
-			}
-			else
-			{
-				MessageBox.Show("Vui lòng chọn ít nhất một món.");
 			}
 		}
 
